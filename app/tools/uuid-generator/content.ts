@@ -6,6 +6,7 @@ export const toolInfo = {
 };
 
 export const relatedTools = [
+  { name: 'Timestamp Converter', href: '/tools/timestamp-converter' },
   { name: 'Base64 Encoder', href: '/tools/base64-encoder' },
   { name: 'JSON Formatter', href: '/tools/json-formatter' },
 ];

@@ -6,8 +6,9 @@ export const toolInfo = {
 };
 
 export const relatedTools = [
+  { name: 'URL Encoder/Decoder', href: '/tools/url-encoder-decoder' },
+  { name: 'JWT Decoder', href: '/tools/jwt-decoder' },
   { name: 'JSON Formatter', href: '/tools/json-formatter' },
-  { name: 'UUID Generator', href: '/tools/uuid-generator' },
 ];
 
 export const features = [
