@@ -12,27 +12,12 @@ const tools = [
   {
     name: 'Base64 Encoder',
     description: 'Encode and decode Base64 strings',
-    href: '/tools/base64',
+    href: '/tools/base64-encoder',
   },
   {
-    name: 'Regex Tester',
-    description: 'Test and debug regular expressions',
-    href: '/tools/regex-tester',
-  },
-  {
-    name: 'JWT Decoder',
-    description: 'Decode and inspect JWT tokens',
-    href: '/tools/jwt-decoder',
-  },
-  {
-    name: 'Hash Generator',
-    description: 'Generate MD5, SHA-1, SHA-256 hashes',
-    href: '/tools/hash-generator',
-  },
-  {
-    name: 'URL Encoder',
-    description: 'Encode and decode URL strings',
-    href: '/tools/url-encoder',
+    name: 'UUID Generator',
+    description: 'Generate random UUIDs (v4)',
+    href: '/tools/uuid-generator',
   },
 ];
 
