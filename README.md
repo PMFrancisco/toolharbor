@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ToolHarbor
+
+A fast, SEO-optimized collection of developer utilities built with Next.js. Each tool is designed to work client-side, load instantly, and provide real value to developers.
+
+## Tech Stack
+
+- **Framework:** Next.js 16 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS 4
+- **Rendering:** Static Site Generation (SSG)
+- **Hosting:** Vercel
+
+## Available Tools
+
+| Tool           | Description                         |
+| -------------- | ----------------------------------- |
+| JSON Formatter | Format, validate, and beautify JSON |
+| Base64 Encoder | Encode and decode Base64 strings    |
+| UUID Generator | Generate UUIDs (v1, v4, v7)         |
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 20+
+- Bun (recommended) or npm/yarn/pnpm
+
+### Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+cd toolharbor
+bun install
+```
+
+### Development
+
+```bash
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the app.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+bun run build
+bun start
+```
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+toolharbor/
+├── app/
+│   ├── layout.tsx          # Root layout
+│   ├── page.tsx            # Homepage
+│   ├── sitemap.ts          # Auto-generated sitemap
+│   ├── robots.ts           # Robots.txt config
+│   └── tools/
+│       ├── json-formatter/
+│       ├── base64-encoder/
+│       └── uuid-generator/
+├── components/
+│   ├── ToolLayout.tsx      # Shared tool page layout
+│   ├── Header.tsx
+│   ├── Footer.tsx
+│   ├── tool-sections/      # Reusable SEO sections
+│   └── ui/                 # Base UI components
+├── lib/
+│   ├── seo.ts              # SEO utilities
+│   ├── utils.ts
+│   └── tools/              # Pure tool logic
+└── public/
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Adding a New Tool
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Create folder: `app/tools/<tool-slug>/`
+2. Add files:
+   - `page.tsx` - Next.js entry with metadata
+   - `<ToolName>Tool.tsx` - Interactive UI component
+   - `content.ts` - SEO content (features, steps, examples, FAQ)
+3. Add logic to `lib/tools/<tool>.ts`
+4. Update `sitemap.ts`
 
-## Deploy on Vercel
+Each tool page includes:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- H1 title with primary keyword
+- Tool UI (above the fold)
+- Features list
+- How to use steps
+- Input/output examples
+- Explanation (300-600 words)
+- FAQ section
+- Related tools links
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Scripts
+
+| Command                | Description               |
+| ---------------------- | ------------------------- |
+| `bun dev`              | Start development server  |
+| `bun run build`        | Build for production      |
+| `bun start`            | Start production server   |
+| `bun run lint`         | Run ESLint                |
+| `bun run format`       | Format code with Prettier |
+| `bun run format:check` | Check code formatting     |
+
+## Design Principles
+
+- **Speed first:** Minimal JS, no heavy libraries, Lighthouse > 90
+- **Client-side:** Tools work offline, no backend required
+- **SEO-optimized:** Unique titles, descriptions, structured data
+- **Clean UI:** Dark mode, minimal design, copy buttons everywhere
+
+## License
+
+See [LICENSE](./LICENSE) for details.
