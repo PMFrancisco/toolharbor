@@ -1,13 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { siteConfig } from '@/lib/seo';
-
-// Tools that are currently implemented
-// Add new tools here as they are created
-export const tools = [
-  { slug: 'json-formatter', name: 'JSON Formatter' },
-  { slug: 'base64-encoder', name: 'Base64 Encoder' },
-  { slug: 'uuid-generator', name: 'UUID Generator' },
-] as const;
+import { tools } from '@/lib/tools-registry';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.url;

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Card, CardTitle, CardContent } from '@/components/ui';
 import { generatePageMetadata } from '@/lib/seo';
+import { tools } from '@/lib/tools-registry';
 
 export const metadata: Metadata = generatePageMetadata({
   title: 'All Developer Tools',
@@ -17,27 +18,6 @@ export const metadata: Metadata = generatePageMetadata({
     'code tools',
   ],
 });
-
-const tools = [
-  {
-    name: 'JSON Formatter',
-    description: 'Format, validate, and beautify JSON data with syntax highlighting',
-    href: '/tools/json-formatter',
-    category: 'Formatters',
-  },
-  {
-    name: 'Base64 Encoder',
-    description: 'Encode and decode Base64 strings instantly',
-    href: '/tools/base64-encoder',
-    category: 'Encoders',
-  },
-  {
-    name: 'UUID Generator',
-    description: 'Generate random UUIDs (v4) for your applications',
-    href: '/tools/uuid-generator',
-    category: 'Generators',
-  },
-];
 
 export default function ToolsPage() {
   return (
@@ -56,7 +36,7 @@ export default function ToolsPage() {
       <section>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {tools.map((tool) => (
-            <Link key={tool.href} href={tool.href}>
+            <Link key={tool.slug} href={`/tools/${tool.slug}`}>
               <Card className="h-full transition-colors hover:border-zinc-400 dark:hover:border-zinc-600">
                 <div className="mb-1">
                   <span className="text-xs font-medium text-zinc-500 dark:text-zinc-500">
