@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { Card, CardTitle, CardContent } from '@/components/ui';
+import { JsonLd } from '@/components';
+import { generateWebsiteJsonLd } from '@/lib/seo';
 
 const tools = [
   {
@@ -37,6 +39,8 @@ const tools = [
 export default function Home() {
   return (
     <main className="mx-auto max-w-5xl px-4 py-12">
+      <JsonLd data={generateWebsiteJsonLd()} />
+
       {/* Hero */}
       <section className="mb-16 text-center">
         <h1 className="mb-4 text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">

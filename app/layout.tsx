@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { Header, Footer } from '@/components';
+import { siteConfig } from '@/lib/seo';
 import './globals.css';
 
 const geistSans = Geist({
@@ -15,11 +16,25 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: 'ToolHarbor - Free Developer Tools',
-    template: '%s | ToolHarbor',
+    default: `${siteConfig.name} - Free Developer Tools`,
+    template: `%s | ${siteConfig.name}`,
   },
-  description:
-    'Free online developer tools. JSON formatter, Base64 encoder, regex tester, and more. Fast, simple, no login required.',
+  description: siteConfig.description,
+  metadataBase: new URL(siteConfig.url),
+  authors: [{ name: siteConfig.author }],
+  creator: siteConfig.author,
+  openGraph: {
+    type: 'website',
+    locale: siteConfig.locale,
+    siteName: siteConfig.name,
+  },
+  twitter: {
+    card: 'summary_large_image',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
