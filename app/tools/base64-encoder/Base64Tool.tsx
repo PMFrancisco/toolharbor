@@ -115,23 +115,30 @@ export function Base64Tool() {
 
           {/* Input/Output */}
           <div className="grid gap-4 lg:grid-cols-2">
-            <Textarea
-              label={mode === 'encode' ? 'Text to Encode' : 'Base64 to Decode'}
-              placeholder={
-                mode === 'encode' ? 'Enter text to encode...' : 'Paste Base64 string to decode...'
-              }
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              error={error}
-              className="min-h-[200px]"
-            />
+            <div className="flex flex-col gap-1.5">
+              <div className="flex items-center justify-between">
+                <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
+                  {mode === 'encode' ? 'Text to Encode' : 'Base64 to Decode'}
+                </label>
+                <CopyButton text={input} size="sm" disabled={!input} />
+              </div>
+              <Textarea
+                placeholder={
+                  mode === 'encode' ? 'Enter text to encode...' : 'Paste Base64 string to decode...'
+                }
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                error={error}
+                className="min-h-[200px]"
+              />
+            </div>
 
             <div className="flex flex-col gap-1.5">
               <div className="flex items-center justify-between">
                 <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
                   {mode === 'encode' ? 'Base64 Output' : 'Decoded Text'}
                 </label>
-                {output && <CopyButton text={output} size="sm" />}
+                <CopyButton text={output} size="sm" disabled={!output} />
               </div>
               <textarea
                 readOnly

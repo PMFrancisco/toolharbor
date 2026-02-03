@@ -123,21 +123,28 @@ export function JsonFormatterTool() {
 
           {/* Input/Output */}
           <div className="grid gap-4 lg:grid-cols-2">
-            <Textarea
-              label="Input JSON"
-              placeholder="Paste your JSON here..."
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              error={error}
-              className="min-h-[280px]"
-            />
+            <div className="flex flex-col gap-1.5">
+              <div className="flex items-center justify-between">
+                <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
+                  Input JSON
+                </label>
+                <CopyButton text={input} size="sm" disabled={!input} />
+              </div>
+              <Textarea
+                placeholder="Paste your JSON here..."
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                error={error}
+                className="min-h-[280px]"
+              />
+            </div>
 
             <div className="flex flex-col gap-1.5">
               <div className="flex items-center justify-between">
                 <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
                   Output
                 </label>
-                {output && <CopyButton text={output} size="sm" />}
+                <CopyButton text={output} size="sm" disabled={!output} />
               </div>
               <textarea
                 readOnly
