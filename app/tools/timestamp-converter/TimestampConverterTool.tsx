@@ -37,6 +37,11 @@ function TimestampConverterUI() {
     setInput('');
   }, []);
 
+  const loadSample = useCallback(() => {
+    // Sample: January 1, 2024 00:00:00 UTC
+    setInput('1704067200');
+  }, []);
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value);
   };
@@ -72,6 +77,9 @@ function TimestampConverterUI() {
       {/* Controls */}
       <div className="flex flex-wrap items-center gap-3">
         <Button onClick={useCurrentTime}>Use Current Time</Button>
+        <Button variant="ghost" onClick={loadSample}>
+          Load Sample
+        </Button>
         <Button variant="ghost" onClick={clearAll}>
           Clear
         </Button>

@@ -44,6 +44,14 @@ function Base64UI() {
     setInput('');
   }, []);
 
+  const loadSample = useCallback(() => {
+    if (mode === 'encode') {
+      setInput('Hello, World! This is a sample text for Base64 encoding.');
+    } else {
+      setInput('SGVsbG8sIFdvcmxkISBUaGlzIGlzIGEgc2FtcGxlIHRleHQgZm9yIEJhc2U2NCBlbmNvZGluZy4=');
+    }
+  }, [mode]);
+
   return (
     <div className="space-y-4">
       {/* Mode Toggle */}
@@ -59,6 +67,9 @@ function Base64UI() {
       {/* Controls */}
       <div className="flex flex-wrap items-center gap-3">
         <SwapButton onClick={swapInputOutput} disabled={!output} />
+        <Button variant="ghost" onClick={loadSample}>
+          Load Sample
+        </Button>
         <Button variant="ghost" onClick={clearAll}>
           Clear
         </Button>
