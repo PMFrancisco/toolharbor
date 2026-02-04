@@ -6,4 +6,4 @@ export { Card, CardHeader, CardTitle, CardContent } from './Card';
 export { ErrorMessage, type ErrorMessageProps } from './ErrorMessage';
 export { SwapButton, type SwapButtonProps } from './SwapButton';
 export { ModeToggle, type ModeToggleProps, type ModeToggleOption } from './ModeToggle';
-export { InfoBox, type InfoBoxProps, type InfoBoxVariant } from './InfoBox';
+export { InfoBox, type InfoBoxProps } from './InfoBox';

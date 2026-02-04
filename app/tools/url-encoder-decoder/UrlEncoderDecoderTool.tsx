@@ -198,7 +198,7 @@ function UrlEncoderDecoderUI() {
       </div>
 
       {/* Info box */}
-      <InfoBox variant="tip">
+      <InfoBox title="Tip">
         {encodeType === 'component'
           ? 'Component mode encodes all special characters including / ? # &. Use this for query string values.'
           : 'Full URL mode preserves URL structure (:, /, ?, #). Use this for complete URLs.'}
