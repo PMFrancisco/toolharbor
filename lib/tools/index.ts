@@ -26,3 +26,6 @@ export { formatSql, minifySql } from './sql';
 export type { SqlResult } from './sql';
 
 export { markdownToHtml, getPreviewHtml } from './markdown';
+
+export { jsonToYaml, yamlToJson } from './yaml';
+export type { YamlResult, YamlConvertSuccess, YamlConvertError } from './yaml';

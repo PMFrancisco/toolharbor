@@ -6,9 +6,9 @@ export const toolInfo = {
 };
 
 export const relatedTools = [
+  { name: 'JSON to CSV Converter', href: '/tools/json-csv-converter' },
   { name: 'JSON Formatter', href: '/tools/json-formatter' },
-  { name: 'Base64 Encoder', href: '/tools/base64-encoder' },
-  { name: 'SQL Formatter', href: '/tools/sql-formatter' },
+  { name: 'JSON to YAML Converter', href: '/tools/json-yaml-converter' },
 ];
 
 export const features = [

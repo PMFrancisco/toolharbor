@@ -89,6 +89,18 @@ export const tools: Tool[] = [
     description: 'Preview Markdown as rendered HTML in real-time',
     category: 'Preview',
   },
+  {
+    slug: 'json-yaml-converter',
+    name: 'JSON to YAML Converter',
+    description: 'Convert between JSON and YAML formats instantly',
+    category: 'Converters',
+  },
+  {
+    slug: 'json-csv-converter',
+    name: 'JSON to CSV Converter',
+    description: 'Export JSON arrays to CSV for Excel and spreadsheets',
+    category: 'Converters',
+  },
 ];
 
 // Helper functions
