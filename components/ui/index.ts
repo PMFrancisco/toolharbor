@@ -7,3 +7,4 @@ export { ErrorMessage, type ErrorMessageProps } from './ErrorMessage';
 export { SwapButton, type SwapButtonProps } from './SwapButton';
 export { ModeToggle, type ModeToggleProps, type ModeToggleOption } from './ModeToggle';
 export { InfoBox, type InfoBoxProps } from './InfoBox';
+export { Input, type InputProps } from './Input';

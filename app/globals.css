@@ -1,25 +1,77 @@
 @import 'tailwindcss';
 
+/*
+ * Theme Colors
+ * Change these values to update colors across the entire site.
+ * Light mode values are the defaults, dark mode overrides below.
+ */
 :root {
+  /* Base */
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Primary accent (links, highlights) */
+  --primary: #2563eb; /* blue-600 */
+  --primary-hover: #1d4ed8; /* blue-700 */
+
+  /* Featured badge */
+  --badge-bg: #fef3c7; /* amber-100 */
+  --badge-text: #92400e; /* amber-800 */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Base */
+    --background: #0a0a0a;
+    --foreground: #ededed;
+
+    /* Primary accent (links, highlights) */
+    --primary: #60a5fa; /* blue-400 */
+    --primary-hover: #93c5fd; /* blue-300 */
+
+    /* Featured badge */
+    --badge-bg: rgba(120, 53, 15, 0.3); /* amber-900/30 */
+    --badge-text: #fbbf24; /* amber-400 */
+  }
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+/* Theme utility classes */
+.text-primary {
+  color: var(--primary);
+}
+
+.text-primary-hover:hover {
+  color: var(--primary-hover);
+}
+
+.hover\:text-primary-hover:hover {
+  color: var(--primary-hover);
+}
+
+.bg-badge-bg {
+  background-color: var(--badge-bg);
+}
+
+.text-badge-text {
+  color: var(--badge-text);
+}
+
+.accent-primary {
+  accent-color: var(--primary);
+}
+
+.focus\:ring-primary:focus {
+  --tw-ring-color: var(--primary);
 }

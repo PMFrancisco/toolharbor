@@ -171,28 +171,36 @@ function MarkdownPreviewUI() {
       <InfoBox title="Quick Reference">
         <div className="mt-1 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <code className="rounded bg-zinc-200 px-1 dark:bg-zinc-700"># H1</code> Heading 1
+            <code className="rounded bg-zinc-200 px-1 font-mono dark:bg-zinc-700"># H1</code>{' '}
+            Heading 1
           </div>
           <div>
-            <code className="rounded bg-zinc-200 px-1 dark:bg-zinc-700">**bold**</code> Bold text
+            <code className="rounded bg-zinc-200 px-1 font-mono dark:bg-zinc-700">**bold**</code>{' '}
+            Bold text
           </div>
           <div>
-            <code className="rounded bg-zinc-200 px-1 dark:bg-zinc-700">*italic*</code> Italic text
+            <code className="rounded bg-zinc-200 px-1 font-mono dark:bg-zinc-700">*italic*</code>{' '}
+            Italic text
           </div>
           <div>
-            <code className="rounded bg-zinc-200 px-1 dark:bg-zinc-700">[link](url)</code> Link
+            <code className="rounded bg-zinc-200 px-1 font-mono dark:bg-zinc-700">[link](url)</code>{' '}
+            Link
           </div>
           <div>
-            <code className="rounded bg-zinc-200 px-1 dark:bg-zinc-700">- item</code> List item
+            <code className="rounded bg-zinc-200 px-1 font-mono dark:bg-zinc-700">- item</code> List
+            item
           </div>
           <div>
-            <code className="rounded bg-zinc-200 px-1 dark:bg-zinc-700">`code`</code> Inline code
+            <code className="rounded bg-zinc-200 px-1 font-mono dark:bg-zinc-700">`code`</code>{' '}
+            Inline code
           </div>
           <div>
-            <code className="rounded bg-zinc-200 px-1 dark:bg-zinc-700">&gt; quote</code> Blockquote
+            <code className="rounded bg-zinc-200 px-1 font-mono dark:bg-zinc-700">&gt; quote</code>{' '}
+            Blockquote
           </div>
           <div>
-            <code className="rounded bg-zinc-200 px-1 dark:bg-zinc-700">---</code> Horizontal rule
+            <code className="rounded bg-zinc-200 px-1 font-mono dark:bg-zinc-700">---</code>{' '}
+            Horizontal rule
           </div>
         </div>
       </InfoBox>

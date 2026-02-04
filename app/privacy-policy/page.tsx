@@ -34,10 +34,7 @@ export default function PrivacyPolicyPage() {
         This Privacy Policy explains how{' '}
         <strong className="text-zinc-900 dark:text-zinc-100">{siteConfig.name}</strong>{' '}
         (&quot;we&quot;, &quot;us&quot;) collects, uses, and shares information when you visit{' '}
-        <a
-          href={siteConfig.url}
-          className="text-blue-600 underline hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
-        >
+        <a href={siteConfig.url} className="text-primary hover:text-primary-hover underline">
           {siteConfig.url}
         </a>{' '}
         (the &quot;Site&quot;).
@@ -74,7 +71,7 @@ export default function PrivacyPolicyPage() {
             href="https://policies.google.com/technologies/partner-sites"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 underline hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+            className="text-primary hover:text-primary-hover underline"
           >
             Google&apos;s Partner Sites Policy
           </a>
@@ -131,7 +128,7 @@ export default function PrivacyPolicyPage() {
               href="https://myadcenter.google.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 underline hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+              className="text-primary hover:text-primary-hover underline"
             >
               My Ad Center
             </a>{' '}
@@ -145,7 +142,7 @@ export default function PrivacyPolicyPage() {
           If you have questions about this Privacy Policy, contact us at{' '}
           <a
             href={`mailto:${CONTACT_EMAIL}`}
-            className="text-blue-600 underline hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+            className="text-primary hover:text-primary-hover underline"
           >
             {CONTACT_EMAIL}
           </a>

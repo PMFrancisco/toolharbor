@@ -107,7 +107,7 @@ function RegexTesterUI() {
               type="checkbox"
               checked={enabled}
               onChange={() => toggleFlag(flag as keyof typeof flags)}
-              className="h-4 w-4 rounded border-zinc-300 text-blue-600 focus:ring-blue-500 dark:border-zinc-600 dark:bg-zinc-800"
+              className="accent-primary focus:ring-primary h-4 w-4 rounded border-zinc-300 dark:border-zinc-600 dark:bg-zinc-800"
             />
             <span className="font-mono">{flag}</span>
             <span className="text-zinc-500 dark:text-zinc-400">
