@@ -8,7 +8,7 @@ export const toolInfo = {
 export const relatedTools = [
   { name: 'URL Encoder/Decoder', href: '/tools/url-encoder-decoder' },
   { name: 'JWT Decoder', href: '/tools/jwt-decoder' },
-  { name: 'JSON Formatter', href: '/tools/json-formatter' },
+  { name: 'Hash Generator', href: '/tools/hash-generator' },
 ];
 
 export const features = [

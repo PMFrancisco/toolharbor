@@ -8,7 +8,7 @@ export const toolInfo = {
 export const relatedTools = [
   { name: 'JSON Formatter', href: '/tools/json-formatter' },
   { name: 'URL Encoder/Decoder', href: '/tools/url-encoder-decoder' },
-  { name: 'Base64 Encoder', href: '/tools/base64-encoder' },
+  { name: 'Markdown Preview', href: '/tools/markdown-preview' },
 ];
 
 export const features = [
