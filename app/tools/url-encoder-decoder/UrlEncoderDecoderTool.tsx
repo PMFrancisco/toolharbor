@@ -9,6 +9,7 @@ import {
   SwapButton,
   ModeToggle,
   ReadOnlyTextarea,
+  InfoBox,
 } from '@/components/ui';
 import { generateToolJsonLd, generateBreadcrumbJsonLd } from '@/lib/seo';
 import { encodeUrl, decodeUrl, encodeFullUrl, decodeFullUrl } from '@/lib/tools';
@@ -197,12 +198,11 @@ function UrlEncoderDecoderUI() {
       </div>
 
       {/* Info box */}
-      <div className="rounded-lg border border-blue-200 bg-blue-50 p-3 text-sm text-blue-800 dark:border-blue-800 dark:bg-blue-900/20 dark:text-blue-200">
-        <strong>Tip:</strong>{' '}
+      <InfoBox variant="tip">
         {encodeType === 'component'
           ? 'Component mode encodes all special characters including / ? # &. Use this for query string values.'
           : 'Full URL mode preserves URL structure (:, /, ?, #). Use this for complete URLs.'}
-      </div>
+      </InfoBox>
     </div>
   );
 }

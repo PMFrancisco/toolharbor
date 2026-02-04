@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from 'react';
 import { ToolLayout, JsonLd } from '@/components';
-import { Button, Textarea, CopyButton, ReadOnlyTextarea } from '@/components/ui';
+import { Button, Textarea, CopyButton, ReadOnlyTextarea, InfoBox } from '@/components/ui';
 import { generateToolJsonLd, generateBreadcrumbJsonLd } from '@/lib/seo';
 import { formatSql, minifySql } from '@/lib/tools';
 import {
@@ -121,16 +121,11 @@ function SqlFormatterUI() {
       </div>
 
       {/* Quick reference */}
-      <div className="rounded-lg border border-zinc-300 bg-zinc-50 p-4 dark:border-zinc-700 dark:bg-zinc-800">
-        <h3 className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
-          Supported SQL Keywords
-        </h3>
-        <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
-          SELECT, FROM, WHERE, AND, OR, JOIN, LEFT JOIN, RIGHT JOIN, INNER JOIN, ON, GROUP BY, ORDER
-          BY, HAVING, LIMIT, OFFSET, INSERT INTO, VALUES, UPDATE, SET, DELETE FROM, UNION, CASE,
-          WHEN, THEN, ELSE, END, and more.
-        </p>
-      </div>
+      <InfoBox title="Supported SQL Keywords">
+        SELECT, FROM, WHERE, AND, OR, JOIN, LEFT JOIN, RIGHT JOIN, INNER JOIN, ON, GROUP BY, ORDER
+        BY, HAVING, LIMIT, OFFSET, INSERT INTO, VALUES, UPDATE, SET, DELETE FROM, UNION, CASE, WHEN,
+        THEN, ELSE, END, and more.
+      </InfoBox>
     </div>
   );
 }

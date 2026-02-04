@@ -2,7 +2,14 @@
 
 import { useState, useCallback, useMemo } from 'react';
 import { ToolLayout, JsonLd } from '@/components';
-import { Button, CopyButton, ModeToggle, Textarea, ReadOnlyTextarea } from '@/components/ui';
+import {
+  Button,
+  CopyButton,
+  ModeToggle,
+  Textarea,
+  ReadOnlyTextarea,
+  InfoBox,
+} from '@/components/ui';
 import { generateToolJsonLd, generateBreadcrumbJsonLd } from '@/lib/seo';
 import { markdownToHtml, getPreviewHtml } from '@/lib/tools';
 import {
@@ -161,9 +168,8 @@ function MarkdownPreviewUI() {
       </div>
 
       {/* Quick reference */}
-      <div className="rounded-lg border border-zinc-300 bg-zinc-50 p-4 dark:border-zinc-700 dark:bg-zinc-800">
-        <h3 className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Quick Reference</h3>
-        <div className="mt-2 grid gap-2 text-sm text-zinc-600 sm:grid-cols-2 lg:grid-cols-4 dark:text-zinc-400">
+      <InfoBox title="Quick Reference">
+        <div className="mt-1 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <code className="rounded bg-zinc-200 px-1 dark:bg-zinc-700"># H1</code> Heading 1
           </div>
@@ -189,7 +195,7 @@ function MarkdownPreviewUI() {
             <code className="rounded bg-zinc-200 px-1 dark:bg-zinc-700">---</code> Horizontal rule
           </div>
         </div>
-      </div>
+      </InfoBox>
     </div>
   );
 }
