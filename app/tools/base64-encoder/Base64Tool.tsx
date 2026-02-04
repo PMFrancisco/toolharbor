@@ -1,8 +1,15 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import { ToolLayout, JsonLd } from '@/components';
-import { Button, Textarea, CopyButton } from '@/components/ui';
+import {
+  Button,
+  Textarea,
+  CopyButton,
+  SwapButton,
+  ModeToggle,
+  ReadOnlyTextarea,
+} from '@/components/ui';
 import { generateToolJsonLd, generateBreadcrumbJsonLd } from '@/lib/seo';
 import { encodeBase64, decodeBase64 } from '@/lib/tools';
 import {
@@ -17,71 +24,41 @@ import {
 
 function Base64UI() {
   const [input, setInput] = useState('');
-  const [output, setOutput] = useState('');
-  const [error, setError] = useState('');
   const [mode, setMode] = useState<'encode' | 'decode'>('encode');
 
-  const handleAction = useCallback(() => {
-    const result = mode === 'encode' ? encodeBase64(input) : decodeBase64(input);
-
-    if (result.success) {
-      setOutput(result.data);
-      setError('');
-    } else {
-      setError(result.error);
-      setOutput('');
-    }
+  const result = useMemo(() => {
+    if (!input.trim()) return null;
+    return mode === 'encode' ? encodeBase64(input) : decodeBase64(input);
   }, [mode, input]);
 
+  const output = result?.success ? result.data : '';
+  const error = result && !result.success ? result.error : '';
+
   const swapInputOutput = useCallback(() => {
+    if (!output) return;
     setInput(output);
-    setOutput('');
-    setError('');
     setMode((prev) => (prev === 'encode' ? 'decode' : 'encode'));
   }, [output]);
 
   const clearAll = useCallback(() => {
     setInput('');
-    setOutput('');
-    setError('');
   }, []);
 
   return (
     <div className="space-y-4">
       {/* Mode Toggle */}
-      <div className="flex items-center gap-2">
-        <div className="inline-flex rounded-lg border border-zinc-300 p-1 dark:border-zinc-700">
-          <button
-            onClick={() => setMode('encode')}
-            className={`rounded-md px-4 py-2 text-sm font-medium transition-colors ${
-              mode === 'encode'
-                ? 'bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900'
-                : 'text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100'
-            }`}
-          >
-            Encode
-          </button>
-          <button
-            onClick={() => setMode('decode')}
-            className={`rounded-md px-4 py-2 text-sm font-medium transition-colors ${
-              mode === 'decode'
-                ? 'bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900'
-                : 'text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100'
-            }`}
-          >
-            Decode
-          </button>
-        </div>
-      </div>
+      <ModeToggle
+        options={[
+          { value: 'encode', label: 'Encode' },
+          { value: 'decode', label: 'Decode' },
+        ]}
+        value={mode}
+        onChange={setMode}
+      />
 
       {/* Controls */}
       <div className="flex flex-wrap items-center gap-3">
-        <Button onClick={handleAction}>
-          {mode === 'encode' ? 'Encode to Base64' : 'Decode from Base64'}
-        </Button>
-        <Button variant="secondary" onClick={swapInputOutput} disabled={!output}>
-          Swap
-        </Button>
+        <SwapButton onClick={swapInputOutput} disabled={!output} />
         <Button variant="ghost" onClick={clearAll}>
           Clear
         </Button>
@@ -114,12 +91,7 @@ function Base64UI() {
             </label>
             <CopyButton text={output} size="sm" disabled={!output} />
           </div>
-          <textarea
-            readOnly
-            value={output}
-            placeholder="Result will appear here..."
-            className="min-h-[200px] w-full resize-y rounded-lg border border-zinc-300 bg-zinc-50 px-3 py-2 font-mono text-sm text-zinc-900 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100"
-          />
+          <ReadOnlyTextarea value={output} placeholder="Result will appear here..." />
         </div>
       </div>
     </div>

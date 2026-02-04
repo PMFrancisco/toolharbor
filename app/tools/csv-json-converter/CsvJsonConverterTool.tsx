@@ -2,7 +2,14 @@
 
 import { useState, useCallback } from 'react';
 import { ToolLayout, JsonLd } from '@/components';
-import { Button, Textarea, CopyButton } from '@/components/ui';
+import {
+  Button,
+  Textarea,
+  CopyButton,
+  SwapButton,
+  ModeToggle,
+  ReadOnlyTextarea,
+} from '@/components/ui';
 import { generateToolJsonLd, generateBreadcrumbJsonLd } from '@/lib/seo';
 import { csvToJson, jsonToCsv } from '@/lib/tools';
 import {
@@ -78,28 +85,14 @@ Bob Johnson,bob@example.com,35,Chicago`);
     <div className="space-y-4">
       {/* Mode and delimiter selection */}
       <div className="flex flex-wrap items-center gap-4">
-        <div className="flex items-center rounded-lg border border-zinc-300 dark:border-zinc-700">
-          <button
-            onClick={() => setMode('csv-to-json')}
-            className={`px-4 py-2 text-sm font-medium transition-colors ${
-              mode === 'csv-to-json'
-                ? 'bg-blue-600 text-white'
-                : 'bg-white text-zinc-700 hover:bg-zinc-50 dark:bg-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-800'
-            } rounded-l-lg`}
-          >
-            CSV → JSON
-          </button>
-          <button
-            onClick={() => setMode('json-to-csv')}
-            className={`px-4 py-2 text-sm font-medium transition-colors ${
-              mode === 'json-to-csv'
-                ? 'bg-blue-600 text-white'
-                : 'bg-white text-zinc-700 hover:bg-zinc-50 dark:bg-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-800'
-            } rounded-r-lg`}
-          >
-            JSON → CSV
-          </button>
-        </div>
+        <ModeToggle
+          options={[
+            { value: 'csv-to-json', label: 'CSV → JSON' },
+            { value: 'json-to-csv', label: 'JSON → CSV' },
+          ]}
+          value={mode}
+          onChange={setMode}
+        />
 
         <div className="flex items-center gap-2">
           <label htmlFor="delimiter" className="text-sm text-zinc-600 dark:text-zinc-400">
@@ -121,9 +114,7 @@ Bob Johnson,bob@example.com,35,Chicago`);
       {/* Controls */}
       <div className="flex flex-wrap items-center gap-3">
         <Button onClick={handleConvert}>Convert</Button>
-        <Button variant="secondary" onClick={swapMode} disabled={!output}>
-          Swap Input/Output
-        </Button>
+        <SwapButton onClick={swapMode} disabled={!output} />
         <Button variant="ghost" onClick={loadSample}>
           Load Sample
         </Button>
@@ -161,15 +152,14 @@ Bob Johnson,bob@example.com,35,Chicago`);
             </label>
             <CopyButton text={output} size="sm" disabled={!output} />
           </div>
-          <textarea
-            readOnly
+          <ReadOnlyTextarea
             value={output}
             placeholder={
               mode === 'csv-to-json'
                 ? 'JSON output will appear here...'
                 : 'CSV output will appear here...'
             }
-            className="min-h-[280px] w-full resize-y rounded-lg border border-zinc-300 bg-zinc-50 px-3 py-2 font-mono text-sm text-zinc-900 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100"
+            className="min-h-[280px]"
           />
         </div>
       </div>

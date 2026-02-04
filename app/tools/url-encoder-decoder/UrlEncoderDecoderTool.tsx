@@ -2,7 +2,14 @@
 
 import { useState, useCallback } from 'react';
 import { ToolLayout, JsonLd } from '@/components';
-import { Button, Textarea, CopyButton } from '@/components/ui';
+import {
+  Button,
+  Textarea,
+  CopyButton,
+  SwapButton,
+  ModeToggle,
+  ReadOnlyTextarea,
+} from '@/components/ui';
 import { generateToolJsonLd, generateBreadcrumbJsonLd } from '@/lib/seo';
 import { encodeUrl, decodeUrl, encodeFullUrl, decodeFullUrl } from '@/lib/tools';
 import {
@@ -105,36 +112,18 @@ function UrlEncoderDecoderUI() {
     <div className="space-y-4">
       {/* Mode selection */}
       <div className="flex flex-wrap items-center gap-4">
-        <div className="flex items-center rounded-lg border border-zinc-300 dark:border-zinc-700">
-          <button
-            onClick={() => {
-              setMode('encode');
-              setOutput('');
-              setError('');
-            }}
-            className={`px-4 py-2 text-sm font-medium transition-colors ${
-              mode === 'encode'
-                ? 'bg-blue-600 text-white'
-                : 'bg-white text-zinc-700 hover:bg-zinc-50 dark:bg-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-800'
-            } rounded-l-lg`}
-          >
-            Encode
-          </button>
-          <button
-            onClick={() => {
-              setMode('decode');
-              setOutput('');
-              setError('');
-            }}
-            className={`px-4 py-2 text-sm font-medium transition-colors ${
-              mode === 'decode'
-                ? 'bg-blue-600 text-white'
-                : 'bg-white text-zinc-700 hover:bg-zinc-50 dark:bg-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-800'
-            } rounded-r-lg`}
-          >
-            Decode
-          </button>
-        </div>
+        <ModeToggle
+          options={[
+            { value: 'encode', label: 'Encode' },
+            { value: 'decode', label: 'Decode' },
+          ]}
+          value={mode}
+          onChange={(newMode) => {
+            setMode(newMode);
+            setOutput('');
+            setError('');
+          }}
+        />
 
         <div className="flex items-center gap-2">
           <label htmlFor="encodeType" className="text-sm text-zinc-600 dark:text-zinc-400">
@@ -158,9 +147,7 @@ function UrlEncoderDecoderUI() {
       {/* Controls */}
       <div className="flex flex-wrap items-center gap-3">
         <Button onClick={handleConvert}>{mode === 'encode' ? 'Encode' : 'Decode'}</Button>
-        <Button variant="secondary" onClick={swapInputOutput} disabled={!output}>
-          Swap & Switch Mode
-        </Button>
+        <SwapButton onClick={swapInputOutput} disabled={!output} />
         <Button variant="ghost" onClick={loadSample}>
           Load Sample
         </Button>
@@ -198,15 +185,13 @@ function UrlEncoderDecoderUI() {
             </label>
             <CopyButton text={output} size="sm" disabled={!output} />
           </div>
-          <textarea
-            readOnly
+          <ReadOnlyTextarea
             value={output}
             placeholder={
               mode === 'encode'
                 ? 'Encoded result will appear here...'
                 : 'Decoded result will appear here...'
             }
-            className="min-h-[200px] w-full resize-y rounded-lg border border-zinc-300 bg-zinc-50 px-3 py-2 font-mono text-sm text-zinc-900 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100"
           />
         </div>
       </div>

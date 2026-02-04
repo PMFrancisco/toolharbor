@@ -2,7 +2,7 @@
 
 import { useState, useCallback, useMemo } from 'react';
 import { ToolLayout, JsonLd } from '@/components';
-import { Button, Textarea, CopyButton } from '@/components/ui';
+import { Button, Textarea, CopyButton, ErrorMessage } from '@/components/ui';
 import { generateToolJsonLd, generateBreadcrumbJsonLd } from '@/lib/seo';
 import { testRegex } from '@/lib/tools';
 import {
@@ -95,9 +95,7 @@ function RegexTesterUI() {
             /{flagString}
           </span>
         </div>
-        {!result.success && pattern && (
-          <p className="text-sm text-red-600 dark:text-red-400">{result.error}</p>
-        )}
+        {!result.success && pattern && <ErrorMessage message={result.error} />}
       </div>
 
       {/* Flags */}

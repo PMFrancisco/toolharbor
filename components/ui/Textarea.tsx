@@ -2,6 +2,7 @@
 
 import { forwardRef, type TextareaHTMLAttributes } from 'react';
 import { cn } from '@/lib/utils';
+import { ErrorMessage } from './ErrorMessage';
 
 export interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   label?: string;
@@ -39,7 +40,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
           )}
           {...props}
         />
-        {error && <p className="text-sm text-red-500">{error}</p>}
+        <ErrorMessage message={error} />
       </div>
     );
   }

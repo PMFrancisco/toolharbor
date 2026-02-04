@@ -2,7 +2,7 @@
 
 import { useState, useCallback, useMemo } from 'react';
 import { ToolLayout, JsonLd } from '@/components';
-import { Button, CopyButton } from '@/components/ui';
+import { Button, CopyButton, ErrorMessage } from '@/components/ui';
 import { generateToolJsonLd, generateBreadcrumbJsonLd } from '@/lib/seo';
 import { parseTimestamp, getCurrentTimestamp } from '@/lib/tools';
 import {
@@ -24,10 +24,13 @@ function TimestampConverterUI() {
     return parseTimestamp(input);
   }, [input]);
 
-  const setNow = useCallback(() => {
+  const refreshCurrentTime = useCallback(() => {
+    setCurrentTime(getCurrentTimestamp());
+  }, []);
+
+  const useCurrentTime = useCallback(() => {
     const now = Date.now();
     setInput(now.toString());
-    setCurrentTime(getCurrentTimestamp());
   }, []);
 
   const clearAll = useCallback(() => {
@@ -44,7 +47,7 @@ function TimestampConverterUI() {
       <div className="rounded-lg border border-zinc-300 bg-zinc-50 p-4 dark:border-zinc-700 dark:bg-zinc-800">
         <div className="flex items-center justify-between">
           <span className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Current Time</span>
-          <Button size="sm" onClick={setNow}>
+          <Button size="sm" variant="ghost" onClick={refreshCurrentTime}>
             Refresh
           </Button>
         </div>
@@ -68,7 +71,7 @@ function TimestampConverterUI() {
 
       {/* Controls */}
       <div className="flex flex-wrap items-center gap-3">
-        <Button onClick={setNow}>Use Current Time</Button>
+        <Button onClick={useCurrentTime}>Use Current Time</Button>
         <Button variant="ghost" onClick={clearAll}>
           Clear
         </Button>
@@ -86,9 +89,7 @@ function TimestampConverterUI() {
           placeholder="e.g., 1704067200, 1704067200000, or 2024-01-15T10:30:00Z"
           className="h-12 w-full rounded-lg border border-zinc-300 bg-white px-4 font-mono text-lg text-zinc-900 placeholder:text-zinc-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
         />
-        {result && !result.success && (
-          <p className="text-sm text-red-600 dark:text-red-400">{result.error}</p>
-        )}
+        {result && !result.success && <ErrorMessage message={result.error} />}
       </div>
 
       {/* Output */}

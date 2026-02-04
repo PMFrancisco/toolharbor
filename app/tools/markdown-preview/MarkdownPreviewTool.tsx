@@ -2,7 +2,7 @@
 
 import { useState, useCallback, useMemo } from 'react';
 import { ToolLayout, JsonLd } from '@/components';
-import { Button, CopyButton } from '@/components/ui';
+import { Button, CopyButton, ModeToggle, Textarea, ReadOnlyTextarea } from '@/components/ui';
 import { generateToolJsonLd, generateBreadcrumbJsonLd } from '@/lib/seo';
 import { markdownToHtml, getPreviewHtml } from '@/lib/tools';
 import {
@@ -99,28 +99,15 @@ function MarkdownPreviewUI() {
           Clear
         </Button>
 
-        <div className="ml-auto flex items-center rounded-lg border border-zinc-300 dark:border-zinc-700">
-          <button
-            onClick={() => setViewMode('preview')}
-            className={`px-3 py-1.5 text-sm font-medium transition-colors ${
-              viewMode === 'preview'
-                ? 'bg-blue-600 text-white'
-                : 'bg-white text-zinc-700 hover:bg-zinc-50 dark:bg-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-800'
-            } rounded-l-lg`}
-          >
-            Preview
-          </button>
-          <button
-            onClick={() => setViewMode('html')}
-            className={`px-3 py-1.5 text-sm font-medium transition-colors ${
-              viewMode === 'html'
-                ? 'bg-blue-600 text-white'
-                : 'bg-white text-zinc-700 hover:bg-zinc-50 dark:bg-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-800'
-            } rounded-r-lg`}
-          >
-            HTML
-          </button>
-        </div>
+        <ModeToggle
+          options={[
+            { value: 'preview', label: 'Preview' },
+            { value: 'html', label: 'HTML' },
+          ]}
+          value={viewMode}
+          onChange={setViewMode}
+          className="ml-auto"
+        />
       </div>
 
       {/* Editor and Preview */}
@@ -131,11 +118,11 @@ function MarkdownPreviewUI() {
             <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Markdown</label>
             <CopyButton text={markdown} size="sm" disabled={!markdown} />
           </div>
-          <textarea
+          <Textarea
             value={markdown}
             onChange={(e) => setMarkdown(e.target.value)}
             placeholder="Type your Markdown here..."
-            className="min-h-[400px] w-full resize-y rounded-lg border border-zinc-300 bg-white px-3 py-2 font-mono text-sm text-zinc-900 placeholder:text-zinc-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
+            className="min-h-[400px]"
           />
         </div>
 
@@ -164,11 +151,10 @@ function MarkdownPreviewUI() {
               )}
             </div>
           ) : (
-            <textarea
-              readOnly
+            <ReadOnlyTextarea
               value={html}
               placeholder="HTML output will appear here..."
-              className="min-h-[400px] w-full resize-y rounded-lg border border-zinc-300 bg-zinc-50 px-3 py-2 font-mono text-sm text-zinc-900 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100"
+              className="min-h-[400px]"
             />
           )}
         </div>

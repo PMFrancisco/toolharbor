@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from 'react';
 import { ToolLayout, JsonLd } from '@/components';
-import { Button, Textarea, CopyButton } from '@/components/ui';
+import { Button, Textarea, CopyButton, ReadOnlyTextarea } from '@/components/ui';
 import { generateToolJsonLd, generateBreadcrumbJsonLd } from '@/lib/seo';
 import { formatSql, minifySql } from '@/lib/tools';
 import {
@@ -112,11 +112,10 @@ function SqlFormatterUI() {
             </label>
             <CopyButton text={output} size="sm" disabled={!output} />
           </div>
-          <textarea
-            readOnly
+          <ReadOnlyTextarea
             value={output}
             placeholder="Formatted SQL will appear here..."
-            className="min-h-[300px] w-full resize-y rounded-lg border border-zinc-300 bg-zinc-50 px-3 py-2 font-mono text-sm text-zinc-900 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100"
+            className="min-h-[300px]"
           />
         </div>
       </div>
