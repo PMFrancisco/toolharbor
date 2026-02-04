@@ -101,6 +101,12 @@ export const tools: Tool[] = [
     description: 'Export JSON arrays to CSV for Excel and spreadsheets',
     category: 'Converters',
   },
+  {
+    slug: 'hash-generator',
+    name: 'Hash Generator',
+    description: 'Generate MD5, SHA-1, SHA-256, SHA-384, and SHA-512 hashes',
+    category: 'Generators',
+  },
 ];
 
 // Helper functions

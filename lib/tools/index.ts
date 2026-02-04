@@ -29,3 +29,6 @@ export { markdownToHtml, getPreviewHtml } from './markdown';
 
 export { jsonToYaml, yamlToJson } from './yaml';
 export type { YamlResult, YamlConvertSuccess, YamlConvertError } from './yaml';
+
+export { generateHash, generateAllHashes, getHashLength, hashAlgorithms } from './hash';
+export type { HashAlgorithm, HashResult, HashError, HashResponse } from './hash';
