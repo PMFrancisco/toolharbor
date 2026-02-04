@@ -21,10 +21,10 @@ export function SwapButton({ label = 'Swap Input/Output', ...props }: SwapButton
         strokeLinejoin="round"
         className="mr-1.5"
       >
-        <path d="M8 7l-4 4 4 4" />
-        <path d="M4 11h16" />
-        <path d="M16 17l4-4-4-4" />
-        <path d="M20 13H4" />
+        <path d="M8 4l-4 4 4 4" />
+        <path d="M4 8h16" />
+        <path d="M16 20l4-4-4-4" />
+        <path d="M20 16H4" />
       </svg>
       {label}
     </Button>

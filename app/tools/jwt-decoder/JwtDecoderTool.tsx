@@ -70,13 +70,7 @@ function JwtDecoderUI() {
       {result?.success && (
         <div className="space-y-4">
           {/* Status banner */}
-          <div
-            className={`flex items-center justify-between rounded-lg border p-3 ${
-              result.data.isExpired
-                ? 'border-red-300 bg-red-50 dark:border-red-800 dark:bg-red-900/20'
-                : 'border-green-300 bg-green-50 dark:border-green-800 dark:bg-green-900/20'
-            }`}
-          >
+          <div className="flex items-center justify-between rounded-lg border border-zinc-300 bg-zinc-50 p-3 dark:border-zinc-700 dark:bg-zinc-800">
             <div className="flex items-center gap-2">
               <span
                 className={`text-lg ${result.data.isExpired ? 'text-red-600 dark:text-red-400' : 'text-green-600 dark:text-green-400'}`}
@@ -101,7 +95,7 @@ function JwtDecoderUI() {
             <div className="flex items-center justify-between">
               <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
                 Header
-                <span className="ml-2 rounded bg-blue-100 px-1.5 py-0.5 text-xs font-normal text-blue-700 dark:bg-blue-900 dark:text-blue-300">
+                <span className="ml-2 rounded bg-zinc-200 px-1.5 py-0.5 text-xs font-normal text-zinc-600 dark:bg-zinc-700 dark:text-zinc-300">
                   ALGORITHM & TOKEN TYPE
                 </span>
               </label>
@@ -117,7 +111,7 @@ function JwtDecoderUI() {
             <div className="flex items-center justify-between">
               <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
                 Payload
-                <span className="ml-2 rounded bg-purple-100 px-1.5 py-0.5 text-xs font-normal text-purple-700 dark:bg-purple-900 dark:text-purple-300">
+                <span className="ml-2 rounded bg-zinc-200 px-1.5 py-0.5 text-xs font-normal text-zinc-600 dark:bg-zinc-700 dark:text-zinc-300">
                   DATA
                 </span>
               </label>
@@ -159,7 +153,7 @@ function JwtDecoderUI() {
             <div className="flex items-center justify-between">
               <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
                 Signature
-                <span className="ml-2 rounded bg-orange-100 px-1.5 py-0.5 text-xs font-normal text-orange-700 dark:bg-orange-900 dark:text-orange-300">
+                <span className="ml-2 rounded bg-zinc-200 px-1.5 py-0.5 text-xs font-normal text-zinc-600 dark:bg-zinc-700 dark:text-zinc-300">
                   NOT VERIFIED
                 </span>
               </label>
