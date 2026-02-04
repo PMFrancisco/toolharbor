@@ -31,19 +31,24 @@ export const howToSteps = [
 export const examples = [
   {
     title: 'Headers and text',
-    input: '# Heading 1\\n## Heading 2\\n\\nRegular paragraph with **bold** and *italic* text.',
+    input: '# Heading 1\n## Heading 2\n\nRegular paragraph with **bold** and *italic* text.',
     output:
-      '<h1>Heading 1</h1>\\n<h2>Heading 2</h2>\\n<p>Regular paragraph with <strong>bold</strong> and <em>italic</em> text.</p>',
+      '<h1 style="font-size:1.5em;font-weight:600;margin:0 0 0.5em">Heading 1</h1><h2 style="font-size:1.25em;font-weight:600;margin:0 0 0.5em">Heading 2</h2><p>Regular paragraph with <strong>bold</strong> and <em>italic</em> text.</p>',
+    renderHtml: true,
   },
   {
     title: 'Lists',
-    input: '- Item 1\\n- Item 2\\n  - Nested item\\n\\n1. First\\n2. Second',
-    output: 'Unordered and ordered lists rendered with proper nesting',
+    input: '- Item 1\n- Item 2\n  - Nested item\n\n1. First\n2. Second',
+    output:
+      '<ul style="padding-left:1.5em;margin:0.5em 0;list-style:disc"><li>Item 1</li><li>Item 2<ul style="padding-left:1.5em;margin:0.25em 0;list-style:circle"><li>Nested item</li></ul></li></ul><ol style="padding-left:1.5em;margin:0.5em 0;list-style:decimal"><li>First</li><li>Second</li></ol>',
+    renderHtml: true,
   },
   {
     title: 'Code blocks',
-    input: '```javascript\\nconst greeting = "Hello";\\nconsole.log(greeting);\\n```',
-    output: 'Syntax-highlighted code block',
+    input: '```javascript\nconst greeting = "Hello";\nconsole.log(greeting);\n```',
+    output:
+      '<pre style="background:#27272a;padding:0.75em;border-radius:6px;overflow-x:auto"><code style="font-family:monospace;font-size:0.85em">const greeting = "Hello";\nconsole.log(greeting);</code></pre>',
+    renderHtml: true,
   },
 ];
 

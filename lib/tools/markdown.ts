@@ -1,4 +1,121 @@
 /**
+ * Process markdown lists with proper nesting support
+ */
+function processLists(html: string): string {
+  const lines = html.split('\n');
+  const result: string[] = [];
+  let i = 0;
+
+  while (i < lines.length) {
+    const line = lines[i];
+    const ulMatch = line.match(/^(\s*)([-*+])\s+(.*)$/);
+    const olMatch = line.match(/^(\s*)(\d+)\.\s+(.*)$/);
+
+    if (ulMatch || olMatch) {
+      // Start of a list - collect all consecutive list items
+      const listLines: { indent: number; content: string; ordered: boolean }[] = [];
+
+      while (i < lines.length) {
+        const currentLine = lines[i];
+        const ulCurrent = currentLine.match(/^(\s*)([-*+])\s+(.*)$/);
+        const olCurrent = currentLine.match(/^(\s*)(\d+)\.\s+(.*)$/);
+
+        if (ulCurrent) {
+          listLines.push({
+            indent: ulCurrent[1].length,
+            content: ulCurrent[3],
+            ordered: false,
+          });
+          i++;
+        } else if (olCurrent) {
+          listLines.push({
+            indent: olCurrent[1].length,
+            content: olCurrent[3],
+            ordered: true,
+          });
+          i++;
+        } else if (currentLine.trim() === '') {
+          // Empty line might end the list or be between items
+          // Check if next non-empty line is a list item
+          let j = i + 1;
+          while (j < lines.length && lines[j].trim() === '') j++;
+          if (j < lines.length) {
+            const nextUl = lines[j].match(/^(\s*)([-*+])\s+(.*)$/);
+            const nextOl = lines[j].match(/^(\s*)(\d+)\.\s+(.*)$/);
+            if (nextUl || nextOl) {
+              i++;
+              continue;
+            }
+          }
+          break;
+        } else {
+          break;
+        }
+      }
+
+      // Build nested list HTML
+      result.push(buildNestedList(listLines));
+    } else {
+      result.push(line);
+      i++;
+    }
+  }
+
+  return result.join('\n');
+}
+
+/**
+ * Build nested HTML list from parsed list items
+ */
+function buildNestedList(items: { indent: number; content: string; ordered: boolean }[]): string {
+  if (items.length === 0) return '';
+
+  const result: string[] = [];
+  const stack: { indent: number; ordered: boolean }[] = [];
+
+  for (const item of items) {
+    // Close lists that are deeper than current indent
+    while (stack.length > 0 && stack[stack.length - 1].indent >= item.indent) {
+      const popped = stack.pop()!;
+      result.push(popped.ordered ? '</ol>' : '</ul>');
+      result.push('</li>');
+    }
+
+    // Check if we need to open a new list
+    const needNewList =
+      stack.length === 0 ||
+      stack[stack.length - 1].indent < item.indent ||
+      stack[stack.length - 1].ordered !== item.ordered;
+
+    if (needNewList) {
+      if (stack.length > 0 && stack[stack.length - 1].indent < item.indent) {
+        // Nested list - don't close parent li yet
+        result.push(item.ordered ? '<ol>' : '<ul>');
+      } else if (stack.length === 0) {
+        result.push(item.ordered ? '<ol>' : '<ul>');
+      }
+      stack.push({ indent: item.indent, ordered: item.ordered });
+    }
+
+    result.push(`<li>${item.content}`);
+
+    // Check if next item is nested (will be handled in next iteration)
+    const nextIndex = items.indexOf(item) + 1;
+    if (nextIndex >= items.length || items[nextIndex].indent <= item.indent) {
+      result.push('</li>');
+    }
+  }
+
+  // Close remaining open lists
+  while (stack.length > 0) {
+    const popped = stack.pop()!;
+    result.push(popped.ordered ? '</ol>' : '</ul>');
+  }
+
+  return result.join('');
+}
+
+/**
  * Convert Markdown to HTML
  * Simple implementation without external dependencies
  */
@@ -60,16 +177,8 @@ export function markdownToHtml(markdown: string): string {
   // Merge consecutive blockquotes
   html = html.replace(/<\/blockquote>\n<blockquote>/g, '\n');
 
-  // Unordered lists
-  html = html.replace(/^\s*[-*+]\s+(.*)$/gm, '<li>$1</li>');
-  html = html.replace(/(<li>.*<\/li>\n?)+/g, '<ul>$&</ul>');
-
-  // Ordered lists
-  html = html.replace(/^\s*\d+\.\s+(.*)$/gm, '<oli>$1</oli>');
-  html = html.replace(/(<oli>.*<\/oli>\n?)+/g, (match) => {
-    return '<ol>' + match.replace(/<\/?oli>/g, (tag) => tag.replace('oli', 'li')) + '</ol>';
-  });
-  html = html.replace(/<oli>/g, '<li>').replace(/<\/oli>/g, '</li>');
+  // Process lists with proper nesting
+  html = processLists(html);
 
   // Task lists
   html = html.replace(/<li>\s*\[\s*\]\s*/g, '<li><input type="checkbox" disabled> ');
@@ -175,8 +284,9 @@ export function getPreviewHtml(markdown: string): string {
       border-left: 4px solid #ddd;
       color: #666;
     }
-    ul, ol { padding-left: 2em; }
-    li { margin: 0.5em 0; }
+    ul, ol { padding-left: 2em; margin: 0.5em 0; }
+    li { margin: 0.25em 0; }
+    li > ul, li > ol { margin-top: 0.25em; }
     table { border-collapse: collapse; width: 100%; margin: 1em 0; }
     td, th { border: 1px solid #ddd; padding: 0.5em; text-align: left; }
     hr { border: none; border-top: 1px solid #eee; margin: 2em 0; }

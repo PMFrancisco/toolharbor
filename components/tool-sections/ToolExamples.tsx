@@ -6,6 +6,8 @@ interface Example {
   title?: string;
   input: string;
   output: string;
+  /** If true, render output as HTML instead of plain text */
+  renderHtml?: boolean;
 }
 
 interface ToolExamplesProps {
@@ -42,13 +44,20 @@ export function ToolExamples({ examples }: ToolExamplesProps) {
               <div className="p-4">
                 <div className="mb-2 flex items-center justify-between">
                   <p className="text-xs font-medium tracking-wide text-zinc-500 uppercase">
-                    Output
+                    {example.renderHtml ? 'Preview' : 'Output'}
                   </p>
                   <CopyButton text={example.output} size="sm" variant="ghost" />
                 </div>
-                <pre className="overflow-x-auto font-mono text-sm break-all whitespace-pre-wrap text-zinc-800 dark:text-zinc-200">
-                  {example.output}
-                </pre>
+                {example.renderHtml ? (
+                  <div
+                    className="text-sm text-zinc-800 dark:text-zinc-200 [&_code]:font-mono [&_code]:text-xs [&_em]:italic [&_h1]:mb-2 [&_h1]:text-xl [&_h1]:font-semibold [&_h2]:mb-2 [&_h2]:text-lg [&_h2]:font-semibold [&_h3]:mb-1 [&_h3]:text-base [&_h3]:font-semibold [&_li]:my-0.5 [&_ol]:my-2 [&_ol]:list-decimal [&_ol]:pl-5 [&_p]:my-2 [&_pre]:overflow-x-auto [&_pre]:rounded-md [&_pre]:bg-zinc-800 [&_pre]:p-3 [&_strong]:font-semibold [&_ul]:my-2 [&_ul]:list-disc [&_ul]:pl-5"
+                    dangerouslySetInnerHTML={{ __html: example.output }}
+                  />
+                ) : (
+                  <pre className="overflow-x-auto font-mono text-sm break-all whitespace-pre-wrap text-zinc-800 dark:text-zinc-200">
+                    {example.output}
+                  </pre>
+                )}
               </div>
             </div>
           </div>
