@@ -15,6 +15,12 @@ export function Footer() {
             >
               Privacy Policy
             </Link>
+            <Link
+              href="/cookie-policy"
+              className="text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+            >
+              Cookie Policy
+            </Link>
           </div>
         </div>
       </div>
