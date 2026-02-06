@@ -11,7 +11,7 @@ export const metadata: Metadata = generatePageMetadata({
 });
 
 const LAST_UPDATED = '2026-02-05';
-const CONTACT_EMAIL = 'francisco.perez.munoz@gmail.com';
+const CONTACT_EMAIL = 'toolharbordev@gmail.com';
 const DATA_CONTROLLER_NAME = 'Francisco Pérez Muñoz';
 const DATA_CONTROLLER_COUNTRY = 'Spain';
 

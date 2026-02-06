@@ -11,7 +11,7 @@ export const metadata: Metadata = generatePageMetadata({
 });
 
 const LAST_UPDATED = '2026-02-05';
-const CONTACT_EMAIL = 'francisco.perez.munoz@gmail.com';
+const CONTACT_EMAIL = 'toolharbordev@gmail.com';
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
