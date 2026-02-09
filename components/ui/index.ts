@@ -8,3 +8,4 @@ export { SwapButton, type SwapButtonProps } from './SwapButton';
 export { ModeToggle, type ModeToggleProps, type ModeToggleOption } from './ModeToggle';
 export { InfoBox, type InfoBoxProps } from './InfoBox';
 export { Input, type InputProps } from './Input';
+export { Select, type SelectProps, type SelectOption } from './Select';

@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from 'react';
 import { ToolLayout, JsonLd } from '@/components';
-import { Button, CopyButton } from '@/components/ui';
+import { Button, CopyButton, Select } from '@/components/ui';
 import { generateToolJsonLd, generateBreadcrumbJsonLd } from '@/lib/seo';
 import { generateUUIDs, formatUUID } from '@/lib/tools';
 import {
@@ -38,18 +38,12 @@ function UuidUI() {
           <label htmlFor="count" className="text-sm text-zinc-600 dark:text-zinc-400">
             Count:
           </label>
-          <select
+          <Select
             id="count"
             value={count}
             onChange={(e) => setCount(Number(e.target.value))}
-            className="h-10 rounded-lg border border-zinc-300 bg-white px-3 text-sm dark:border-zinc-700 dark:bg-zinc-900"
-          >
-            {[1, 5, 10, 25, 50, 100].map((n) => (
-              <option key={n} value={n}>
-                {n}
-              </option>
-            ))}
-          </select>
+            options={[1, 5, 10, 25, 50, 100].map((n) => ({ value: n, label: String(n) }))}
+          />
         </div>
 
         <label className="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">

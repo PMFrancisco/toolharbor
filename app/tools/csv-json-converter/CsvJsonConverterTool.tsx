@@ -9,6 +9,7 @@ import {
   SwapButton,
   ModeToggle,
   ReadOnlyTextarea,
+  Select,
 } from '@/components/ui';
 import { generateToolJsonLd, generateBreadcrumbJsonLd } from '@/lib/seo';
 import { csvToJson, jsonToCsv } from '@/lib/tools';
@@ -98,16 +99,16 @@ Bob Johnson,bob@example.com,35,Chicago`);
           <label htmlFor="delimiter" className="text-sm text-zinc-600 dark:text-zinc-400">
             Delimiter:
           </label>
-          <select
+          <Select
             id="delimiter"
             value={delimiter}
             onChange={(e) => setDelimiter(e.target.value as Delimiter)}
-            className="h-10 rounded-lg border border-zinc-300 bg-white px-3 text-sm dark:border-zinc-700 dark:bg-zinc-900"
-          >
-            <option value=",">Comma (,)</option>
-            <option value=";">Semicolon (;)</option>
-            <option value="&#9;">Tab</option>
-          </select>
+            options={[
+              { value: ',', label: 'Comma (,)' },
+              { value: ';', label: 'Semicolon (;)' },
+              { value: '\t', label: 'Tab' },
+            ]}
+          />
         </div>
       </div>
 
