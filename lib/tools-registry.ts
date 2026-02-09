@@ -138,6 +138,30 @@ export const tools: Tool[] = [
     description: 'Remove duplicate lines from any list with trim, case matching, and sorting',
     category: 'Text Tools',
   },
+  {
+    slug: 'html-encoder',
+    name: 'HTML Encoder/Decoder',
+    description: 'Encode and decode HTML entities to prevent XSS and display HTML safely',
+    category: 'Encoders',
+  },
+  {
+    slug: 'url-parser',
+    name: 'URL Parser',
+    description: 'Parse any URL into protocol, host, path, query parameters, and hash',
+    category: 'Decoders',
+  },
+  {
+    slug: 'query-string-builder',
+    name: 'Query String Builder',
+    description: 'Build URL query strings from key-value pairs or parse existing URLs',
+    category: 'Generators',
+  },
+  {
+    slug: 'color-converter',
+    name: 'Color Converter',
+    description: 'Convert colors between HEX, RGB, and HSL formats with live preview',
+    category: 'Converters',
+  },
 ];
 
 // Helper functions
