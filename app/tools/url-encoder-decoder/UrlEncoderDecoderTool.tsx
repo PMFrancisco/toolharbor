@@ -10,6 +10,7 @@ import {
   ModeToggle,
   ReadOnlyTextarea,
   InfoBox,
+  Select,
 } from '@/components/ui';
 import { generateToolJsonLd, generateBreadcrumbJsonLd } from '@/lib/seo';
 import { encodeUrl, decodeUrl, encodeFullUrl, decodeFullUrl } from '@/lib/tools';
@@ -130,18 +131,18 @@ function UrlEncoderDecoderUI() {
           <label htmlFor="encodeType" className="text-sm text-zinc-600 dark:text-zinc-400">
             Type:
           </label>
-          <select
+          <Select
             id="encodeType"
             value={encodeType}
             onChange={(e) => {
               setEncodeType(e.target.value as EncodeType);
               setOutput('');
             }}
-            className="h-10 rounded-lg border border-zinc-300 bg-white px-3 text-sm dark:border-zinc-700 dark:bg-zinc-900"
-          >
-            <option value="component">Component (encodeURIComponent)</option>
-            <option value="full">Full URL (encodeURI)</option>
-          </select>
+            options={[
+              { value: 'component', label: 'Component (encodeURIComponent)' },
+              { value: 'full', label: 'Full URL (encodeURI)' },
+            ]}
+          />
         </div>
       </div>
 

@@ -41,3 +41,9 @@ export type { SlugSeparator, SlugOptions, SlugSeparatorOption } from './slug';
 
 export { analyzeText, formatStatsSummary } from './word-counter';
 export type { TextStats, KeywordEntry, TextAnalysis } from './word-counter';
+
+export { findAndReplace, countMatches, buildPattern } from './find-replace';
+export type { FindReplaceOptions, FindReplaceResult } from './find-replace';
+
+export { removeDuplicates, sortOptions } from './remove-duplicates';
+export type { DeduplicateOptions, DeduplicateResult, SortOrder } from './remove-duplicates';

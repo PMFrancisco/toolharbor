@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from 'react';
 import { ToolLayout, JsonLd } from '@/components';
-import { Button, Textarea, CopyButton, ReadOnlyTextarea } from '@/components/ui';
+import { Button, Textarea, CopyButton, ReadOnlyTextarea, Select } from '@/components/ui';
 import { generateToolJsonLd, generateBreadcrumbJsonLd } from '@/lib/seo';
 import { formatJson, minifyJson } from '@/lib/tools';
 import {
@@ -82,16 +82,16 @@ function JsonFormatterUI() {
           <label htmlFor="indent" className="text-sm text-zinc-600 dark:text-zinc-400">
             Indent:
           </label>
-          <select
+          <Select
             id="indent"
             value={indentSize}
             onChange={(e) => setIndentSize(Number(e.target.value))}
-            className="h-10 rounded-lg border border-zinc-300 bg-white px-3 text-sm dark:border-zinc-700 dark:bg-zinc-900"
-          >
-            <option value={2}>2 spaces</option>
-            <option value={4}>4 spaces</option>
-            <option value={1}>Tab</option>
-          </select>
+            options={[
+              { value: 2, label: '2 spaces' },
+              { value: 4, label: '4 spaces' },
+              { value: 1, label: 'Tab' },
+            ]}
+          />
         </div>
       </div>
 

@@ -126,6 +126,18 @@ export const tools: Tool[] = [
     description: 'Count words, characters, sentences, and paragraphs with reading time',
     category: 'Text Tools',
   },
+  {
+    slug: 'find-replace',
+    name: 'Find & Replace',
+    description: 'Find and replace text with regex, case sensitivity, and whole word matching',
+    category: 'Text Tools',
+  },
+  {
+    slug: 'remove-duplicates',
+    name: 'Remove Duplicates',
+    description: 'Remove duplicate lines from any list with trim, case matching, and sorting',
+    category: 'Text Tools',
+  },
 ];
 
 // Helper functions
