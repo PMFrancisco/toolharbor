@@ -8,6 +8,7 @@ export const toolInfo = {
 export const relatedTools = [
   { name: 'Timestamp Converter', href: '/tools/timestamp-converter' },
   { name: 'Hash Generator', href: '/tools/hash-generator' },
+  { name: 'Slug Generator', href: '/tools/slug-generator' },
   { name: 'JSON Formatter', href: '/tools/json-formatter' },
 ];
 

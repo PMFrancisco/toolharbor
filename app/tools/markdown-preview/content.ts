@@ -6,8 +6,9 @@ export const toolInfo = {
 };
 
 export const relatedTools = [
-  { name: 'SQL Formatter', href: '/tools/sql-formatter' },
-  { name: 'JSON to YAML Converter', href: '/tools/json-yaml-converter' },
+  { name: 'HTML Encoder', href: '/tools/html-encoder' },
+  { name: 'Word Counter', href: '/tools/word-counter' },
+  { name: 'Color Converter', href: '/tools/color-converter' },
   { name: 'Regex Tester', href: '/tools/regex-tester' },
 ];
 

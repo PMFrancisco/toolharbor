@@ -8,8 +8,8 @@ export const toolInfo = {
 export const relatedTools = [
   { name: 'Case Converter', href: '/tools/case-converter' },
   { name: 'URL Encoder/Decoder', href: '/tools/url-encoder-decoder' },
-  { name: 'Base64 Encoder', href: '/tools/base64-encoder' },
-  { name: 'JSON Formatter', href: '/tools/json-formatter' },
+  { name: 'URL Parser', href: '/tools/url-parser' },
+  { name: 'Word Counter', href: '/tools/word-counter' },
 ];
 
 export const features = [

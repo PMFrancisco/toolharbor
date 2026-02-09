@@ -9,6 +9,7 @@ export const relatedTools = [
   { name: 'JWT Decoder', href: '/tools/jwt-decoder' },
   { name: 'UUID Generator', href: '/tools/uuid-generator' },
   { name: 'JSON Formatter', href: '/tools/json-formatter' },
+  { name: 'Hash Generator', href: '/tools/hash-generator' },
 ];
 
 export const features = [

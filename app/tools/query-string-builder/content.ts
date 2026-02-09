@@ -8,7 +8,7 @@ export const toolInfo = {
 export const relatedTools = [
   { name: 'URL Parser', href: '/tools/url-parser' },
   { name: 'URL Encoder/Decoder', href: '/tools/url-encoder-decoder' },
-  { name: 'Base64 Encoder', href: '/tools/base64-encoder' },
+  { name: 'Slug Generator', href: '/tools/slug-generator' },
   { name: 'JSON Formatter', href: '/tools/json-formatter' },
 ];
 

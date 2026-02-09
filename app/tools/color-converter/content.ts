@@ -7,9 +7,9 @@ export const toolInfo = {
 
 export const relatedTools = [
   { name: 'HTML Encoder', href: '/tools/html-encoder' },
-  { name: 'Base64 Encoder', href: '/tools/base64-encoder' },
-  { name: 'Hash Generator', href: '/tools/hash-generator' },
   { name: 'Case Converter', href: '/tools/case-converter' },
+  { name: 'Hash Generator', href: '/tools/hash-generator' },
+  { name: 'Slug Generator', href: '/tools/slug-generator' },
 ];
 
 export const features = [

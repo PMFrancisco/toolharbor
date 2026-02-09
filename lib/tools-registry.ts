@@ -58,6 +58,7 @@ export const tools: Tool[] = [
     name: 'JWT Decoder',
     description: 'Decode and inspect JSON Web Tokens instantly',
     category: 'Decoders',
+    featured: true,
   },
   {
     slug: 'uuid-generator',
@@ -71,6 +72,7 @@ export const tools: Tool[] = [
     name: 'Regex Tester',
     description: 'Test and debug regular expressions with real-time matching',
     category: 'Testers',
+    featured: true,
   },
   {
     slug: 'csv-json-converter',
@@ -83,6 +85,7 @@ export const tools: Tool[] = [
     name: 'Timestamp Converter',
     description: 'Convert Unix timestamps to dates and vice versa',
     category: 'Converters',
+    featured: true,
   },
   {
     slug: 'markdown-preview',

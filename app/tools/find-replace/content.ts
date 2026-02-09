@@ -9,7 +9,7 @@ export const relatedTools = [
   { name: 'Regex Tester', href: '/tools/regex-tester' },
   { name: 'Case Converter', href: '/tools/case-converter' },
   { name: 'Word Counter', href: '/tools/word-counter' },
-  { name: 'Slug Generator', href: '/tools/slug-generator' },
+  { name: 'Remove Duplicates', href: '/tools/remove-duplicates' },
 ];
 
 export const features = [

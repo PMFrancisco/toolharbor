@@ -6,9 +6,10 @@ export const toolInfo = {
 };
 
 export const relatedTools = [
-  { name: 'JSON Formatter', href: '/tools/json-formatter' },
+  { name: 'Find & Replace', href: '/tools/find-replace' },
   { name: 'URL Encoder/Decoder', href: '/tools/url-encoder-decoder' },
   { name: 'Markdown Preview', href: '/tools/markdown-preview' },
+  { name: 'SQL Formatter', href: '/tools/sql-formatter' },
 ];
 
 export const features = [

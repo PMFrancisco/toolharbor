@@ -9,6 +9,7 @@ export const relatedTools = [
   { name: 'SQL Formatter', href: '/tools/sql-formatter' },
   { name: 'JSON to YAML Converter', href: '/tools/json-yaml-converter' },
   { name: 'JWT Decoder', href: '/tools/jwt-decoder' },
+  { name: 'JSON to CSV Converter', href: '/tools/json-csv-converter' },
 ];
 
 export const features = [

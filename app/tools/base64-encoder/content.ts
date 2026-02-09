@@ -9,6 +9,7 @@ export const relatedTools = [
   { name: 'URL Encoder/Decoder', href: '/tools/url-encoder-decoder' },
   { name: 'JWT Decoder', href: '/tools/jwt-decoder' },
   { name: 'Hash Generator', href: '/tools/hash-generator' },
+  { name: 'HTML Encoder', href: '/tools/html-encoder' },
 ];
 
 export const features = [

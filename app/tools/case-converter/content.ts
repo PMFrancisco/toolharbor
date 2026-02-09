@@ -7,9 +7,9 @@ export const toolInfo = {
 
 export const relatedTools = [
   { name: 'Slug Generator', href: '/tools/slug-generator' },
-  { name: 'URL Encoder/Decoder', href: '/tools/url-encoder-decoder' },
-  { name: 'Base64 Encoder', href: '/tools/base64-encoder' },
-  { name: 'JSON Formatter', href: '/tools/json-formatter' },
+  { name: 'Find & Replace', href: '/tools/find-replace' },
+  { name: 'Remove Duplicates', href: '/tools/remove-duplicates' },
+  { name: 'Word Counter', href: '/tools/word-counter' },
 ];
 
 export const features = [
