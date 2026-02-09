@@ -165,6 +165,36 @@ export const tools: Tool[] = [
     description: 'Convert colors between HEX, RGB, and HSL formats with live preview',
     category: 'Converters',
   },
+  {
+    slug: 'text-sorter',
+    name: 'Text Sorter',
+    description: 'Sort lines alphabetically, by length, or randomly with case and trim options',
+    category: 'Text Tools',
+  },
+  {
+    slug: 'line-numbers',
+    name: 'Line Numbering Tool',
+    description: 'Add line numbers to any text with configurable format, padding, and start number',
+    category: 'Text Tools',
+  },
+  {
+    slug: 'text-reverser',
+    name: 'Text Reverser',
+    description: 'Reverse text by characters, words, or lines instantly',
+    category: 'Text Tools',
+  },
+  {
+    slug: 'lorem-ipsum-generator',
+    name: 'Lorem Ipsum Generator',
+    description: 'Generate placeholder text by paragraphs, sentences, or words',
+    category: 'Generators',
+  },
+  {
+    slug: 'text-diff',
+    name: 'Text Diff Checker',
+    description: 'Compare two texts and see differences highlighted line by line',
+    category: 'Text Tools',
+  },
 ];
 
 // Helper functions

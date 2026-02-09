@@ -59,3 +59,23 @@ export type { QueryParam } from './query-string';
 
 export { parseColor } from './color';
 export type { RgbColor, HslColor, ColorResult, ColorParseResult } from './color';
+
+export { sortText, sortModeOptions } from './text-sort';
+export type { SortMode, TextSortOptions, TextSortResult, SortModeOption } from './text-sort';
+
+export { addLineNumbers, numberFormatOptions } from './line-numbers';
+export type {
+  NumberFormat,
+  LineNumberOptions,
+  LineNumberResult,
+  NumberFormatOption,
+} from './line-numbers';
+
+export { reverseText, reverseModeOptions } from './text-reverse';
+export type { ReverseMode, ReverseModeOption } from './text-reverse';
+
+export { generateLoremIpsum, loremUnitOptions } from './lorem-ipsum';
+export type { LoremUnit, LoremOptions, LoremUnitOption } from './lorem-ipsum';
+
+export { computeDiff } from './text-diff';
+export type { DiffOptions, DiffLineType, DiffLine, DiffResult } from './text-diff';
