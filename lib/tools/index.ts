@@ -47,3 +47,15 @@ export type { FindReplaceOptions, FindReplaceResult } from './find-replace';
 
 export { removeDuplicates, sortOptions } from './remove-duplicates';
 export type { DeduplicateOptions, DeduplicateResult, SortOrder } from './remove-duplicates';
+
+export { encodeHtml, decodeHtml } from './html-encode';
+export type { HtmlResult } from './html-encode';
+
+export { parseFullUrl } from './url-parser';
+export type { ParsedUrl, ParsedParam, UrlParseResult } from './url-parser';
+
+export { buildQueryString, parseQueryString, createParam } from './query-string';
+export type { QueryParam } from './query-string';
+
+export { parseColor } from './color';
+export type { RgbColor, HslColor, ColorResult, ColorParseResult } from './color';
