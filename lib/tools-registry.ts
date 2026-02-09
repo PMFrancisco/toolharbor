@@ -107,6 +107,12 @@ export const tools: Tool[] = [
     description: 'Generate MD5, SHA-1, SHA-256, SHA-384, and SHA-512 hashes',
     category: 'Generators',
   },
+  {
+    slug: 'case-converter',
+    name: 'Case Converter',
+    description: 'Convert text between camelCase, PascalCase, snake_case, kebab-case, and more',
+    category: 'Converters',
+  },
 ];
 
 // Helper functions
