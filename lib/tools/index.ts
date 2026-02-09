@@ -35,3 +35,9 @@ export type { HashAlgorithm, HashResult, HashError, HashResponse } from './hash'
 
 export { convertCase, caseOptions } from './case';
 export type { CaseType, CaseOption } from './case';
+
+export { generateSlug, slugSeparatorOptions } from './slug';
+export type { SlugSeparator, SlugOptions, SlugSeparatorOption } from './slug';
+
+export { analyzeText, formatStatsSummary } from './word-counter';
+export type { TextStats, KeywordEntry, TextAnalysis } from './word-counter';
