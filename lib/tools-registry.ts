@@ -113,6 +113,12 @@ export const tools: Tool[] = [
     description: 'Convert text between camelCase, PascalCase, snake_case, kebab-case, and more',
     category: 'Converters',
   },
+  {
+    slug: 'slug-generator',
+    name: 'Slug Generator',
+    description: 'Generate clean, URL-friendly slugs from any text',
+    category: 'Generators',
+  },
 ];
 
 // Helper functions
