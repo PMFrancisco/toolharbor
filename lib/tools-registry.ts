@@ -15,7 +15,8 @@ export type ToolCategory =
   | 'Generators'
   | 'Converters'
   | 'Testers'
-  | 'Preview';
+  | 'Preview'
+  | 'Text Tools';
 
 export interface Tool {
   slug: string;
@@ -118,6 +119,12 @@ export const tools: Tool[] = [
     name: 'Slug Generator',
     description: 'Generate clean, URL-friendly slugs from any text',
     category: 'Generators',
+  },
+  {
+    slug: 'word-counter',
+    name: 'Word & Character Counter',
+    description: 'Count words, characters, sentences, and paragraphs with reading time',
+    category: 'Text Tools',
   },
 ];
 
