@@ -32,3 +32,6 @@ export type { YamlResult, YamlConvertSuccess, YamlConvertError } from './yaml';
 
 export { generateHash, generateAllHashes, getHashLength, hashAlgorithms } from './hash';
 export type { HashAlgorithm, HashResult, HashError, HashResponse } from './hash';
+
+export { convertCase, caseOptions } from './case';
+export type { CaseType, CaseOption } from './case';
