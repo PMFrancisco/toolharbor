@@ -94,3 +94,84 @@ export type { LoremUnit, LoremOptions, LoremUnitOption } from './lorem-ipsum';
 
 export { computeDiff } from './text-diff';
 export type { DiffOptions, DiffLineType, DiffLine, DiffResult } from './text-diff';
+
+export { parseUserAgent, getCurrentUserAgent } from './user-agent';
+export type {
+  UserAgentData,
+  UserAgentSuccess,
+  UserAgentError,
+  UserAgentResult,
+} from './user-agent';
+
+export {
+  parseCronExpression,
+  buildCronExpression,
+  getMinuteOptions,
+  getHourOptions,
+  getDayOfMonthOptions,
+  getMonthOptions,
+  getDayOfWeekOptions,
+  CRON_PRESETS,
+  CRON_FIELDS,
+} from './cron';
+export type {
+  CronField,
+  CronParseResult,
+  CronParseSuccess,
+  CronParseError,
+  CronPreset,
+  CronBuildOptions,
+  CronSelectOption,
+} from './cron';
+
+export { envToJson, jsonToEnv } from './env-json';
+export type { EnvJsonResult, EnvJsonError, EnvJsonResponse } from './env-json';
+
+export { generateJwt, getDefaultPayload, jwtAlgorithms } from './jwt-generator';
+export type {
+  JwtAlgorithm,
+  JwtGenerateResult,
+  JwtGenerateSuccess,
+  JwtGenerateError,
+} from './jwt-generator';
+
+export {
+  validateJsonSchema,
+  isValidJsonSchema,
+  getDefaultSchema,
+  getDefaultSchemaData,
+} from './json-schema';
+export type {
+  ValidationError,
+  SchemaValidationResult,
+  SchemaValidationSuccess,
+  SchemaValidationError,
+} from './json-schema';
+
+export {
+  searchMimeTypes,
+  getMimeByExtension,
+  getMimeByType,
+  getMimeCategories,
+  mimeCategoryInfo,
+  mimeTypes,
+} from './mime-types';
+export type { MimeType, MimeCategory, MimeCategoryInfo } from './mime-types';
+
+export {
+  searchHttpStatus,
+  getHttpStatusByCode,
+  getHttpStatusByCategory,
+  getCategories,
+  httpStatusCodes,
+  categoryInfo,
+} from './http-status';
+export type { HttpStatusCode, HttpStatusCategory, HttpStatusCategoryInfo } from './http-status';
+
+export {
+  generatePassword,
+  generatePasswords,
+  calculateStrength,
+  getDefaultOptions,
+} from './password';
+export type { PasswordOptions, PasswordStrength, PasswordResult } from './password';

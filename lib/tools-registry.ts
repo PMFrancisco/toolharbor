@@ -225,6 +225,63 @@ export const tools: Tool[] = [
     description: 'View and preview CSV data as a formatted table with delimiter support',
     category: 'Preview',
   },
+  {
+    slug: 'env-to-json',
+    name: '.env to JSON Converter',
+    description: 'Convert .env environment variable files to JSON and back instantly',
+    category: 'Converters',
+  },
+  {
+    slug: 'jwt-generator',
+    name: 'JWT Generator',
+    description: 'Generate and sign JSON Web Tokens (JWT) for testing with HS256, HS384, HS512',
+    category: 'Generators',
+  },
+  {
+    slug: 'json-schema-validator',
+    name: 'JSON Schema Validator',
+    description: 'Validate JSON data against a JSON Schema to check structure and types',
+    category: 'Testers',
+  },
+  {
+    slug: 'user-agent-parser',
+    name: 'User Agent Parser',
+    description:
+      'Parse user agent strings to identify browser, OS, device type, and rendering engine',
+    category: 'Decoders',
+  },
+  {
+    slug: 'cron-parser',
+    name: 'Cron Expression Parser',
+    description: 'Parse and explain cron expressions in plain English with next run times',
+    category: 'Decoders',
+  },
+  {
+    slug: 'cron-generator',
+    name: 'Cron Expression Generator',
+    description: 'Generate cron expressions visually with an easy-to-use schedule builder',
+    category: 'Generators',
+  },
+  {
+    slug: 'password-generator',
+    name: 'Password Generator',
+    description:
+      'Generate strong, secure random passwords with customizable length and character options',
+    category: 'Generators',
+  },
+  {
+    slug: 'http-status-lookup',
+    name: 'HTTP Status Code Lookup',
+    description: 'Look up any HTTP status code with descriptions, categories, and search',
+    category: 'Decoders',
+  },
+  {
+    slug: 'mime-type-lookup',
+    name: 'MIME Type Lookup',
+    description:
+      'Look up MIME types by file extension or content type with a searchable developer reference',
+    category: 'Decoders',
+  },
 ];
 
 // Helper functions
