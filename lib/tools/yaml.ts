@@ -115,7 +115,7 @@ function stringifyYaml(value: unknown, indent: number = 0): string {
  * Simple YAML parser for basic structures
  * Handles objects, arrays, strings, numbers, booleans, and null
  */
-function parseYaml(yaml: string): unknown {
+export function parseYaml(yaml: string): unknown {
   const lines = yaml.split('\n');
   let index = 0;
 

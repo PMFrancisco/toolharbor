@@ -195,6 +195,36 @@ export const tools: Tool[] = [
     description: 'Compare two texts and see differences highlighted line by line',
     category: 'Text Tools',
   },
+  {
+    slug: 'yaml-formatter',
+    name: 'YAML Formatter',
+    description: 'Format, validate, and beautify YAML data with key sorting and custom indentation',
+    category: 'Formatters',
+  },
+  {
+    slug: 'xml-formatter',
+    name: 'XML Formatter',
+    description: 'Format, validate, and beautify XML data with syntax validation',
+    category: 'Formatters',
+  },
+  {
+    slug: 'html-formatter',
+    name: 'HTML Formatter',
+    description: 'Format, beautify, and minify HTML code with proper indentation',
+    category: 'Formatters',
+  },
+  {
+    slug: 'number-base-converter',
+    name: 'Number Base Converter',
+    description: 'Convert numbers between binary, decimal, hexadecimal, and octal instantly',
+    category: 'Converters',
+  },
+  {
+    slug: 'csv-viewer',
+    name: 'CSV Viewer',
+    description: 'View and preview CSV data as a formatted table with delimiter support',
+    category: 'Preview',
+  },
 ];
 
 // Helper functions
