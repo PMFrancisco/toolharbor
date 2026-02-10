@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useCallback } from 'react';
 import { ToolLayout, JsonLd } from '@/components';
-import { Button, Textarea, CopyButton, Select, ErrorMessage } from '@/components/ui';
+import { Button, Textarea, CopyButton, Select, ErrorMessage, Checkbox } from '@/components/ui';
 import { generateToolJsonLd, generateBreadcrumbJsonLd } from '@/lib/seo';
 import { parseCsvTable } from '@/lib/tools';
 import {
@@ -54,15 +54,11 @@ Charlie Wilson,charlie@example.com,42,Boston,Director`);
         </Button>
 
         <div className="ml-auto flex items-center gap-4">
-          <label className="flex cursor-pointer items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
-            <input
-              type="checkbox"
-              checked={hasHeader}
-              onChange={(e) => setHasHeader(e.target.checked)}
-              className="h-4 w-4 rounded border-zinc-300 accent-blue-600 dark:border-zinc-700"
-            />
-            Has Header
-          </label>
+          <Checkbox
+            label="Has Header"
+            checked={hasHeader}
+            onChange={(e) => setHasHeader(e.target.checked)}
+          />
 
           <div className="flex items-center gap-2">
             <label htmlFor="delimiter" className="text-sm text-zinc-600 dark:text-zinc-400">

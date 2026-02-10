@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from 'react';
 import { ToolLayout, JsonLd } from '@/components';
-import { Button, CopyButton, Select, ReadOnlyTextarea } from '@/components/ui';
+import { Button, CopyButton, Select, ReadOnlyTextarea, Checkbox } from '@/components/ui';
 import { generateToolJsonLd, generateBreadcrumbJsonLd } from '@/lib/seo';
 import { generateLoremIpsum, loremUnitOptions } from '@/lib/tools';
 import type { LoremUnit } from '@/lib/tools';
@@ -78,15 +78,11 @@ function LoremIpsumUI() {
           />
         </div>
 
-        <label className="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
-          <input
-            type="checkbox"
-            checked={startWithLorem}
-            onChange={(e) => setStartWithLorem(e.target.checked)}
-            className="h-4 w-4 rounded border-zinc-300 dark:border-zinc-700"
-          />
-          Start with &quot;Lorem ipsum...&quot;
-        </label>
+        <Checkbox
+          label={'Start with "Lorem ipsum..."'}
+          checked={startWithLorem}
+          onChange={(e) => setStartWithLorem(e.target.checked)}
+        />
 
         <CopyButton text={output} label="Copy All" className="ml-auto" />
       </div>

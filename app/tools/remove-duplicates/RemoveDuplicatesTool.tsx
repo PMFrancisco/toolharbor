@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useCallback } from 'react';
 import { ToolLayout, JsonLd } from '@/components';
-import { Button, Textarea, CopyButton, ReadOnlyTextarea, Select } from '@/components/ui';
+import { Button, Textarea, CopyButton, ReadOnlyTextarea, Select, Checkbox } from '@/components/ui';
 import { generateToolJsonLd, generateBreadcrumbJsonLd } from '@/lib/seo';
 import { removeDuplicates, sortOptions } from '@/lib/tools';
 import type { SortOrder } from '@/lib/tools';
@@ -40,33 +40,21 @@ function RemoveDuplicatesUI() {
     <div className="space-y-4">
       {/* Options */}
       <div className="flex flex-wrap items-center gap-4">
-        <label className="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
-          <input
-            type="checkbox"
-            checked={trimWhitespace}
-            onChange={(e) => setTrimWhitespace(e.target.checked)}
-            className="h-4 w-4 rounded border-zinc-300 dark:border-zinc-700"
-          />
-          Trim whitespace
-        </label>
-        <label className="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
-          <input
-            type="checkbox"
-            checked={caseInsensitive}
-            onChange={(e) => setCaseInsensitive(e.target.checked)}
-            className="h-4 w-4 rounded border-zinc-300 dark:border-zinc-700"
-          />
-          Case insensitive
-        </label>
-        <label className="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
-          <input
-            type="checkbox"
-            checked={ignoreEmpty}
-            onChange={(e) => setIgnoreEmpty(e.target.checked)}
-            className="h-4 w-4 rounded border-zinc-300 dark:border-zinc-700"
-          />
-          Ignore empty lines
-        </label>
+        <Checkbox
+          label="Trim whitespace"
+          checked={trimWhitespace}
+          onChange={(e) => setTrimWhitespace(e.target.checked)}
+        />
+        <Checkbox
+          label="Case insensitive"
+          checked={caseInsensitive}
+          onChange={(e) => setCaseInsensitive(e.target.checked)}
+        />
+        <Checkbox
+          label="Ignore empty lines"
+          checked={ignoreEmpty}
+          onChange={(e) => setIgnoreEmpty(e.target.checked)}
+        />
 
         <div className="flex items-center gap-2">
           <label htmlFor="sortOrder" className="text-sm text-zinc-600 dark:text-zinc-400">

@@ -9,3 +9,11 @@ export { ModeToggle, type ModeToggleProps, type ModeToggleOption } from './ModeT
 export { InfoBox, type InfoBoxProps } from './InfoBox';
 export { Input, type InputProps } from './Input';
 export { Select, type SelectProps, type SelectOption } from './Select';
+export { Checkbox, type CheckboxProps } from './Checkbox';
+export { Slider, type SliderProps } from './Slider';
+export { Badge, type BadgeProps, type BadgeVariant } from './Badge';
+export {
+  CategoryFilter,
+  type CategoryFilterProps,
+  type CategoryFilterOption,
+} from './CategoryFilter';

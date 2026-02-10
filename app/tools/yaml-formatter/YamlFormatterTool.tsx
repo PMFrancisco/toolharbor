@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from 'react';
 import { ToolLayout, JsonLd } from '@/components';
-import { Button, Textarea, CopyButton, ReadOnlyTextarea, Select } from '@/components/ui';
+import { Button, Textarea, CopyButton, ReadOnlyTextarea, Select, Checkbox } from '@/components/ui';
 import { generateToolJsonLd, generateBreadcrumbJsonLd } from '@/lib/seo';
 import { formatYaml, compactYaml } from '@/lib/tools';
 import {
@@ -89,15 +89,11 @@ logging:
         </Button>
 
         <div className="ml-auto flex items-center gap-4">
-          <label className="flex cursor-pointer items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
-            <input
-              type="checkbox"
-              checked={sortKeys}
-              onChange={(e) => setSortKeys(e.target.checked)}
-              className="h-4 w-4 rounded border-zinc-300 accent-blue-600 dark:border-zinc-700"
-            />
-            Sort Keys
-          </label>
+          <Checkbox
+            label="Sort Keys"
+            checked={sortKeys}
+            onChange={(e) => setSortKeys(e.target.checked)}
+          />
 
           <div className="flex items-center gap-2">
             <label htmlFor="indent" className="text-sm text-zinc-600 dark:text-zinc-400">

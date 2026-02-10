@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useCallback } from 'react';
 import { ToolLayout, JsonLd } from '@/components';
-import { Button, Textarea, CopyButton } from '@/components/ui';
+import { Button, Textarea, CopyButton, Checkbox } from '@/components/ui';
 import { generateToolJsonLd, generateBreadcrumbJsonLd } from '@/lib/seo';
 import { computeDiff } from '@/lib/tools';
 import {
@@ -57,33 +57,21 @@ function TextDiffUI() {
     <div className="space-y-4">
       {/* Options */}
       <div className="flex flex-wrap items-center gap-4">
-        <label className="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
-          <input
-            type="checkbox"
-            checked={ignoreCase}
-            onChange={(e) => setIgnoreCase(e.target.checked)}
-            className="h-4 w-4 rounded border-zinc-300 dark:border-zinc-700"
-          />
-          Ignore case
-        </label>
-        <label className="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
-          <input
-            type="checkbox"
-            checked={trimWhitespace}
-            onChange={(e) => setTrimWhitespace(e.target.checked)}
-            className="h-4 w-4 rounded border-zinc-300 dark:border-zinc-700"
-          />
-          Trim whitespace
-        </label>
-        <label className="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
-          <input
-            type="checkbox"
-            checked={ignoreEmpty}
-            onChange={(e) => setIgnoreEmpty(e.target.checked)}
-            className="h-4 w-4 rounded border-zinc-300 dark:border-zinc-700"
-          />
-          Skip empty lines
-        </label>
+        <Checkbox
+          label="Ignore case"
+          checked={ignoreCase}
+          onChange={(e) => setIgnoreCase(e.target.checked)}
+        />
+        <Checkbox
+          label="Trim whitespace"
+          checked={trimWhitespace}
+          onChange={(e) => setTrimWhitespace(e.target.checked)}
+        />
+        <Checkbox
+          label="Skip empty lines"
+          checked={ignoreEmpty}
+          onChange={(e) => setIgnoreEmpty(e.target.checked)}
+        />
       </div>
 
       {/* Controls + stats */}

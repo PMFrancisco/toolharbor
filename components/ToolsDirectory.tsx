@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { Input } from '@/components/ui';
+import { Input, CategoryFilter } from '@/components/ui';
 import { ToolCard } from './ToolCard';
 import type { Tool, ToolCategory } from '@/lib/tools-registry';
 
@@ -78,31 +78,13 @@ function ToolsDirectoryContent({ tools }: ToolsDirectoryProps) {
         </div>
 
         {/* Category Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-2">
-          <button
-            onClick={() => setSelectedCategory(null)}
-            className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors ${
-              selectedCategory === null
-                ? 'bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900'
-                : 'bg-zinc-100 text-zinc-700 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700'
-            }`}
-          >
-            All Tools
-          </button>
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors ${
-                selectedCategory === category
-                  ? 'bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900'
-                  : 'bg-zinc-100 text-zinc-700 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700'
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
+        <CategoryFilter
+          options={categories.map((cat) => ({ value: cat, label: cat }))}
+          value={selectedCategory}
+          onChange={setSelectedCategory}
+          allLabel="All Tools"
+          className="justify-center"
+        />
       </div>
 
       {/* Results */}
