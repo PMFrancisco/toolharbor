@@ -13,7 +13,7 @@ export type CsvResult = CsvConvertSuccess | CsvConvertError;
 /**
  * Parse a CSV string into an array of objects
  */
-function parseCsv(csv: string, delimiter: string = ','): Record<string, string>[] {
+export function parseCsv(csv: string, delimiter: string = ','): Record<string, string>[] {
   const lines = csv.trim().split(/\r?\n/);
   if (lines.length < 2) {
     throw new Error('CSV must have at least a header row and one data row');
@@ -41,7 +41,7 @@ function parseCsv(csv: string, delimiter: string = ','): Record<string, string>[
 /**
  * Parse a single CSV line handling quoted values
  */
-function parseCsvLine(line: string, delimiter: string): string[] {
+export function parseCsvLine(line: string, delimiter: string): string[] {
   const result: string[] = [];
   let current = '';
   let inQuotes = false;

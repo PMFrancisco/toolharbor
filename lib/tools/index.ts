@@ -13,8 +13,11 @@ export type { RegexMatch, RegexResult, RegexTestSuccess, RegexTestError } from '
 export { decodeJwt, isJwtFormat } from './jwt';
 export type { JwtHeader, JwtPayload, JwtDecoded, JwtResult } from './jwt';
 
-export { csvToJson, jsonToCsv } from './csv';
+export { csvToJson, jsonToCsv, parseCsv, parseCsvLine } from './csv';
 export type { CsvResult, CsvConvertSuccess, CsvConvertError } from './csv';
+
+export { parseCsvTable } from './csv-viewer';
+export type { CsvTableData, CsvViewerResult } from './csv-viewer';
 
 export { parseTimestamp, getCurrentTimestamp, dateToTimestamp } from './timestamp';
 export type { TimestampData, TimestampResult } from './timestamp';
@@ -29,6 +32,18 @@ export { markdownToHtml, getPreviewHtml } from './markdown';
 
 export { jsonToYaml, yamlToJson } from './yaml';
 export type { YamlResult, YamlConvertSuccess, YamlConvertError } from './yaml';
+
+export { formatYaml, compactYaml, validateYaml } from './yaml-formatter';
+export type { YamlFormatResult, YamlFormatOptions } from './yaml-formatter';
+
+export { formatXml, minifyXml, validateXml } from './xml-formatter';
+export type { XmlFormatResult } from './xml-formatter';
+
+export { formatHtml, minifyHtml } from './html-formatter';
+export type { HtmlFormatResult } from './html-formatter';
+
+export { convertBase, BASE_LABELS } from './number-base';
+export type { NumberBaseValues, BaseType, NumberBaseConversion } from './number-base';
 
 export { generateHash, generateAllHashes, getHashLength, hashAlgorithms } from './hash';
 export type { HashAlgorithm, HashResult, HashError, HashResponse } from './hash';
