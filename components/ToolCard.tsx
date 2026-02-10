@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Card, CardTitle, CardContent } from '@/components/ui';
+import { Card, CardTitle, CardContent, Badge } from '@/components/ui';
 import type { Tool } from '@/lib/tools-registry';
 
 interface ToolCardProps {
@@ -13,9 +13,9 @@ export function ToolCard({ tool }: ToolCardProps) {
         <div className="mb-2 flex items-start justify-between gap-2">
           <CardTitle className="text-base">{tool.name}</CardTitle>
           {tool.featured && (
-            <span className="bg-badge-bg text-badge-text shrink-0 rounded-full px-2 py-0.5 text-xs font-medium">
+            <Badge variant="featured" className="shrink-0">
               Featured
-            </span>
+            </Badge>
           )}
         </div>
         <CardContent className="p-0">
