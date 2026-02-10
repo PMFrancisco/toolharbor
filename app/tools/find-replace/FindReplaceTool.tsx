@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useCallback } from 'react';
 import { ToolLayout, JsonLd } from '@/components';
-import { Button, Textarea, CopyButton, ReadOnlyTextarea, Input } from '@/components/ui';
+import { Button, Textarea, CopyButton, ReadOnlyTextarea, Input, Checkbox } from '@/components/ui';
 import { generateToolJsonLd, generateBreadcrumbJsonLd } from '@/lib/seo';
 import { findAndReplace, countMatches } from '@/lib/tools';
 import {
@@ -77,33 +77,21 @@ function FindReplaceUI() {
 
       {/* Options + match count */}
       <div className="flex flex-wrap items-center gap-4">
-        <label className="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
-          <input
-            type="checkbox"
-            checked={caseSensitive}
-            onChange={(e) => setCaseSensitive(e.target.checked)}
-            className="h-4 w-4 rounded border-zinc-300 dark:border-zinc-700"
-          />
-          Case sensitive
-        </label>
-        <label className="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
-          <input
-            type="checkbox"
-            checked={wholeWord}
-            onChange={(e) => setWholeWord(e.target.checked)}
-            className="h-4 w-4 rounded border-zinc-300 dark:border-zinc-700"
-          />
-          Whole word
-        </label>
-        <label className="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
-          <input
-            type="checkbox"
-            checked={useRegex}
-            onChange={(e) => setUseRegex(e.target.checked)}
-            className="h-4 w-4 rounded border-zinc-300 dark:border-zinc-700"
-          />
-          Regex
-        </label>
+        <Checkbox
+          label="Case sensitive"
+          checked={caseSensitive}
+          onChange={(e) => setCaseSensitive(e.target.checked)}
+        />
+        <Checkbox
+          label="Whole word"
+          checked={wholeWord}
+          onChange={(e) => setWholeWord(e.target.checked)}
+        />
+        <Checkbox
+          label="Regex"
+          checked={useRegex}
+          onChange={(e) => setUseRegex(e.target.checked)}
+        />
 
         {find && (
           <span className="ml-auto text-sm text-zinc-600 dark:text-zinc-400">

@@ -2,7 +2,15 @@
 
 import { useState, useMemo, useCallback } from 'react';
 import { ToolLayout, JsonLd } from '@/components';
-import { Button, Textarea, CopyButton, ReadOnlyTextarea, Select, Input } from '@/components/ui';
+import {
+  Button,
+  Textarea,
+  CopyButton,
+  ReadOnlyTextarea,
+  Select,
+  Input,
+  Checkbox,
+} from '@/components/ui';
 import { generateToolJsonLd, generateBreadcrumbJsonLd } from '@/lib/seo';
 import { addLineNumbers, numberFormatOptions } from '@/lib/tools';
 import type { NumberFormat } from '@/lib/tools';
@@ -68,24 +76,16 @@ function LineNumbersUI() {
           />
         </div>
 
-        <label className="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
-          <input
-            type="checkbox"
-            checked={padNumbers}
-            onChange={(e) => setPadNumbers(e.target.checked)}
-            className="h-4 w-4 rounded border-zinc-300 dark:border-zinc-700"
-          />
-          Pad numbers
-        </label>
-        <label className="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
-          <input
-            type="checkbox"
-            checked={skipEmpty}
-            onChange={(e) => setSkipEmpty(e.target.checked)}
-            className="h-4 w-4 rounded border-zinc-300 dark:border-zinc-700"
-          />
-          Skip empty lines
-        </label>
+        <Checkbox
+          label="Pad numbers"
+          checked={padNumbers}
+          onChange={(e) => setPadNumbers(e.target.checked)}
+        />
+        <Checkbox
+          label="Skip empty lines"
+          checked={skipEmpty}
+          onChange={(e) => setSkipEmpty(e.target.checked)}
+        />
       </div>
 
       {/* Controls + stats */}

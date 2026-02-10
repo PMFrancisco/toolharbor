@@ -2,7 +2,7 @@
 
 import { useState, useCallback, useMemo } from 'react';
 import { ToolLayout, JsonLd } from '@/components';
-import { Button, Textarea, CopyButton, ErrorMessage } from '@/components/ui';
+import { Button, Textarea, CopyButton, ErrorMessage, Checkbox } from '@/components/ui';
 import { generateToolJsonLd, generateBreadcrumbJsonLd } from '@/lib/seo';
 import { testRegex } from '@/lib/tools';
 import {
@@ -66,8 +66,8 @@ function RegexTesterUI() {
     );
   }, []);
 
-  const toggleFlag = useCallback((flag: keyof typeof flags) => {
-    setFlags((prev) => ({ ...prev, [flag]: !prev[flag] }));
+  const handleFlagChange = useCallback((flag: keyof typeof flags, checked: boolean) => {
+    setFlags((prev) => ({ ...prev, [flag]: checked }));
   }, []);
 
   return (
@@ -101,28 +101,24 @@ function RegexTesterUI() {
       {/* Flags */}
       <div className="flex flex-wrap items-center gap-4">
         <span className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Flags:</span>
-        {Object.entries(flags).map(([flag, enabled]) => (
-          <label key={flag} className="flex items-center gap-1.5 text-sm">
-            <input
-              type="checkbox"
+        {Object.entries(flags).map(([flag, enabled]) => {
+          const flagName =
+            flag === 'g'
+              ? 'global'
+              : flag === 'i'
+                ? 'ignoreCase'
+                : flag === 'm'
+                  ? 'multiline'
+                  : 'dotAll';
+          return (
+            <Checkbox
+              key={flag}
+              label={`${flag} (${flagName})`}
               checked={enabled}
-              onChange={() => toggleFlag(flag as keyof typeof flags)}
-              className="accent-primary focus:ring-primary h-4 w-4 rounded border-zinc-300 dark:border-zinc-600 dark:bg-zinc-800"
+              onChange={(e) => handleFlagChange(flag as keyof typeof flags, e.target.checked)}
             />
-            <span className="font-mono">{flag}</span>
-            <span className="text-zinc-500 dark:text-zinc-400">
-              (
-              {flag === 'g'
-                ? 'global'
-                : flag === 'i'
-                  ? 'ignoreCase'
-                  : flag === 'm'
-                    ? 'multiline'
-                    : 'dotAll'}
-              )
-            </span>
-          </label>
-        ))}
+          );
+        })}
       </div>
 
       {/* Controls */}

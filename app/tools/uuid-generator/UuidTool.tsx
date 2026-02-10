@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from 'react';
 import { ToolLayout, JsonLd } from '@/components';
-import { Button, CopyButton, Select } from '@/components/ui';
+import { Button, CopyButton, Select, Checkbox } from '@/components/ui';
 import { generateToolJsonLd, generateBreadcrumbJsonLd } from '@/lib/seo';
 import { generateUUIDs, formatUUID } from '@/lib/tools';
 import {
@@ -46,25 +46,17 @@ function UuidUI() {
           />
         </div>
 
-        <label className="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
-          <input
-            type="checkbox"
-            checked={uppercase}
-            onChange={(e) => setUppercase(e.target.checked)}
-            className="h-4 w-4 rounded border-zinc-300 dark:border-zinc-700"
-          />
-          Uppercase
-        </label>
+        <Checkbox
+          label="Uppercase"
+          checked={uppercase}
+          onChange={(e) => setUppercase(e.target.checked)}
+        />
 
-        <label className="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
-          <input
-            type="checkbox"
-            checked={noDashes}
-            onChange={(e) => setNoDashes(e.target.checked)}
-            className="h-4 w-4 rounded border-zinc-300 dark:border-zinc-700"
-          />
-          No dashes
-        </label>
+        <Checkbox
+          label="No dashes"
+          checked={noDashes}
+          onChange={(e) => setNoDashes(e.target.checked)}
+        />
 
         {uuids.length > 1 && (
           <CopyButton text={allUuidsText} label="Copy All" className="ml-auto" />
