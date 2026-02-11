@@ -5,12 +5,12 @@ import { generatePageMetadata, siteConfig } from '@/lib/seo';
 export const metadata: Metadata = generatePageMetadata({
   title: 'Privacy Policy',
   description:
-    'Learn how ToolHarbor processes information, including Google AdSense advertising and cookie/identifier use by third parties. GDPR and LSSI-CE compliant.',
+    'Learn how ToolHarbor processes information when you use the site. Tool inputs stay in your browser. GDPR and LSSI-CE information.',
   path: '/privacy-policy',
-  keywords: ['privacy policy', 'cookies', 'adsense', 'gdpr', 'consent', 'data protection'],
+  keywords: ['privacy policy', 'cookies', 'gdpr', 'data protection', 'lssi-ce'],
 });
 
-const LAST_UPDATED = '2026-02-05';
+const LAST_UPDATED = '2026-02-11';
 const CONTACT_EMAIL = 'toolharbordev@gmail.com';
 const DATA_CONTROLLER_NAME = 'Francisco Pérez Muñoz';
 const DATA_CONTROLLER_COUNTRY = 'Spain';
@@ -78,11 +78,9 @@ export default function PrivacyPolicyPage() {
           </li>
           <li>
             <strong className="text-zinc-900 dark:text-zinc-100">
-              We may show ads via Google AdSense:
+              No ads or analytics are currently enabled:
             </strong>{' '}
-            If ads are displayed, Google may collect and use data (including cookies or device
-            identifiers) to serve and measure ads, subject to Google&apos;s policies and (where
-            required) your consent choices.
+            At this time, we do not display ads and we do not run third-party analytics on the Site.
           </li>
           <li>
             <strong className="text-zinc-900 dark:text-zinc-100">
@@ -124,49 +122,30 @@ export default function PrivacyPolicyPage() {
           </li>
           <li>
             <strong className="text-zinc-900 dark:text-zinc-100">Cookies / identifiers:</strong> We
-            use Google Analytics (GA4) to collect aggregated usage data (page views, engagement
-            metrics). We do not set our own advertising cookies. However, if ads are displayed,
-            third parties (notably Google) may set cookies or use device identifiers when you view
-            pages with ads.
+            do not intentionally set cookies for advertising or analytics, and we do not currently
+            use third-party analytics or advertising services on the Site.
           </li>
         </ul>
       </Section>
 
-      <Section title="Advertising (Google AdSense)">
+      <Section title="Advertising and Analytics (if enabled in the future)">
         <p>
-          We may display ads on the Site using{' '}
-          <strong className="text-zinc-900 dark:text-zinc-100">Google AdSense</strong>. If ads are
-          displayed, Google may use cookies or device identifiers to serve ads, limit how often you
-          see an ad, measure ad performance, prevent fraud, and (where permitted) deliver ads based
-          on your interests.
-        </p>
-        <p>
-          Learn more about how Google uses data:{' '}
-          <a
-            href="https://policies.google.com/technologies/partner-sites"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary hover:text-primary-hover underline"
-          >
-            Google&apos;s Partner Sites Policy
-          </a>
+          If we enable advertising and/or third-party analytics in the future (for example, ad
+          networks or analytics providers), those services may use cookies, similar technologies, or
+          device identifiers. If/when we enable them, we will update this policy and our{' '}
+          <Link href="/cookie-policy" className="text-primary hover:text-primary-hover underline">
+            Cookie Policy
+          </Link>{' '}
+          accordingly.
         </p>
       </Section>
 
-      <Section title="Consent for Advertising Cookies (EEA / UK / Switzerland)">
+      <Section title="Consent (EEA / UK / Switzerland)">
         <p>
-          If you visit the Site from the European Economic Area (EEA), United Kingdom, or
-          Switzerland and ads are displayed, we aim to use a consent mechanism (for example,
-          Google&apos;s Privacy &amp; messaging European regulations message or another
-          Google-certified CMP integrated with the IAB Transparency and Consent Framework (TCF)) to
-          request consent where legally required before setting advertising cookies or using device
-          identifiers for ad personalization.
-        </p>
-        <p>
-          The consent experience and available options may vary depending on your location and
-          Google&apos;s configuration, and it may appear only when applicable. If you reject or do
-          not provide consent, advertising cookies should not be set and you may see only contextual
-          or limited ads (if available).
+          If we enable non-essential cookies/identifiers in the future (for example, for analytics
+          or advertising) and you visit from the European Economic Area (EEA), United Kingdom, or
+          Switzerland, we will request consent where legally required before those technologies are
+          used.
         </p>
         <p>
           For more details about cookies and similar technologies, see our{' '}
@@ -195,14 +174,12 @@ export default function PrivacyPolicyPage() {
           </li>
           <li>
             <strong className="text-zinc-900 dark:text-zinc-100">
-              Advertising via Google AdSense
+              Third-party services (if enabled in the future)
             </strong>{' '}
-            (if ads are displayed; cookies, device identifiers for ad serving and measurement)
+            (for example, analytics or advertising providers)
             <br />
-            <em>Legal basis:</em> Consent (Article 6(1)(a) GDPR) – for users in the
-            EEA/UK/Switzerland, advertising cookies and identifiers require your prior consent,
-            which is collected via a consent management mechanism. For non-personalized ads or
-            limited ads (where applicable), legitimate interest may apply.
+            <em>Legal basis:</em> Consent (Article 6(1)(a) GDPR) where required for non-essential
+            cookies/identifiers, especially for users in the EEA/UK/Switzerland.
           </li>
           <li>
             <strong className="text-zinc-900 dark:text-zinc-100">
@@ -228,18 +205,9 @@ export default function PrivacyPolicyPage() {
       <Section title="Sharing and Service Providers">
         <p>
           We may share information with service providers and partners that help us operate the
-          Site, including:
+          Site, including infrastructure and security providers.
         </p>
         <ul className="list-disc space-y-2 pl-5">
-          <li>
-            <strong className="text-zinc-900 dark:text-zinc-100">Google (AdSense):</strong> if ads
-            are displayed, to serve and measure ads.
-          </li>
-          <li>
-            <strong className="text-zinc-900 dark:text-zinc-100">Google (Analytics):</strong> to
-            collect aggregated usage statistics (page views, traffic sources, engagement) via Google
-            Analytics 4.
-          </li>
           <li>
             <strong className="text-zinc-900 dark:text-zinc-100">
               Hosting/security providers:
@@ -271,9 +239,9 @@ export default function PrivacyPolicyPage() {
 
       <Section title="International Data Transfers">
         <p>
-          Our service providers (including Google and hosting/CDN providers) may process information
-          on servers located in different countries, including the United States. As a result, your
-          information may be transferred to, stored, or processed outside your country of residence.
+          Our service providers (including hosting/CDN providers) may process information on servers
+          located in different countries, including the United States. As a result, your information
+          may be transferred to, stored, or processed outside your country of residence.
         </p>
         <p>
           For transfers of personal data from the EEA/UK/Switzerland to countries that do not have
@@ -286,16 +254,8 @@ export default function PrivacyPolicyPage() {
           <li>Other legally recognized transfer mechanisms</li>
         </ul>
         <p>
-          For more information about Google&apos;s data transfer practices, see{' '}
-          <a
-            href="https://policies.google.com/privacy/frameworks"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary hover:text-primary-hover underline"
-          >
-            Google&apos;s Privacy Frameworks
-          </a>
-          .
+          If we add third-party providers in the future (for example, analytics or advertising),
+          additional international transfers may occur. We will update this policy accordingly.
         </p>
       </Section>
 
@@ -408,26 +368,6 @@ export default function PrivacyPolicyPage() {
 
       <Section title="Your Choices">
         <ul className="list-disc space-y-2 pl-5">
-          <li>
-            <strong className="text-zinc-900 dark:text-zinc-100">Consent management:</strong> If you
-            visit from the EEA/UK/Switzerland and ads are displayed, you may be shown a consent
-            message that allows you to accept, reject, or manage advertising cookie choices (where
-            legally required). You can typically revisit your choices using links provided in the
-            consent message or Google&apos;s consent tools.
-          </li>
-          <li>
-            <strong className="text-zinc-900 dark:text-zinc-100">Ad choices:</strong> Use
-            Google&apos;s controls (for example,{' '}
-            <a
-              href="https://myadcenter.google.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:text-primary-hover underline"
-            >
-              My Ad Center
-            </a>
-            ) to manage ad personalization.
-          </li>
           <li>
             <strong className="text-zinc-900 dark:text-zinc-100">Browser controls:</strong> You can
             remove or block cookies via your browser settings (note: some features may not work as

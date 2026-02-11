@@ -5,12 +5,12 @@ import { generatePageMetadata, siteConfig } from '@/lib/seo';
 export const metadata: Metadata = generatePageMetadata({
   title: 'Cookie Policy',
   description:
-    'Learn how ToolHarbor uses cookies and similar technologies, including Google AdSense advertising cookies. AEPD and GDPR compliant cookie information.',
+    'Learn how ToolHarbor uses cookies and similar technologies. AEPD and GDPR cookie information.',
   path: '/cookie-policy',
-  keywords: ['cookie policy', 'cookies', 'adsense', 'tracking technologies', 'gdpr', 'aepd'],
+  keywords: ['cookie policy', 'cookies', 'tracking technologies', 'gdpr', 'aepd', 'lssi-ce'],
 });
 
-const LAST_UPDATED = '2026-02-05';
+const LAST_UPDATED = '2026-02-11';
 const CONTACT_EMAIL = 'toolharbordev@gmail.com';
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
@@ -45,37 +45,23 @@ function CookieTable() {
         <tbody>
           <tr className="border-b border-zinc-100 dark:border-zinc-800">
             <td className="px-3 py-2 font-medium text-zinc-900 dark:text-zinc-100">
-              Consent Preferences
+              No cookies set by us
             </td>
-            <td className="px-3 py-2">
-              Store your cookie consent choices (when a consent message is shown)
-            </td>
-            <td className="px-3 py-2">Google (Privacy &amp; messaging / CMP)</td>
-            <td className="px-3 py-2">No (strictly necessary)</td>
-          </tr>
-          <tr className="border-b border-zinc-100 dark:border-zinc-800">
-            <td className="px-3 py-2 font-medium text-zinc-900 dark:text-zinc-100">Advertising</td>
-            <td className="px-3 py-2">
-              Serve ads, frequency capping, fraud prevention, measurement
-            </td>
-            <td className="px-3 py-2">Google AdSense</td>
-            <td className="px-3 py-2">Yes (EEA/UK/CH)</td>
+            <td className="px-3 py-2">We do not intentionally set cookies.</td>
+            <td className="px-3 py-2">{siteConfig.name}</td>
+            <td className="px-3 py-2">No</td>
           </tr>
           <tr className="border-b border-zinc-100 dark:border-zinc-800">
             <td className="px-3 py-2 font-medium text-zinc-900 dark:text-zinc-100">
-              Ad Personalization
+              Analytics / Advertising
             </td>
-            <td className="px-3 py-2">Show interest-based ads based on browsing history</td>
-            <td className="px-3 py-2">Google AdSense</td>
-            <td className="px-3 py-2">Yes (EEA/UK/CH)</td>
-          </tr>
-          <tr className="border-b border-zinc-100 dark:border-zinc-800">
-            <td className="px-3 py-2 font-medium text-zinc-900 dark:text-zinc-100">Analytics</td>
             <td className="px-3 py-2">
-              Measure site traffic, page views, and user engagement to improve our services
+              <strong className="text-zinc-900 dark:text-zinc-100">Not currently used.</strong> If
+              enabled in the future, we will update this policy and request consent where legally
+              required.
             </td>
-            <td className="px-3 py-2">Google Analytics (GA4)</td>
-            <td className="px-3 py-2">Yes (EEA/UK/CH)</td>
+            <td className="px-3 py-2">N/A</td>
+            <td className="px-3 py-2">N/A</td>
           </tr>
         </tbody>
       </table>
@@ -100,9 +86,7 @@ export default function CookiePolicyPage() {
         <a href={siteConfig.url} className="text-primary hover:text-primary-hover underline">
           {siteConfig.url}
         </a>
-        . The &quot;first layer&quot; is the consent message that may be shown (where legally
-        required) when cookies/identifiers for advertising are used, typically for visitors from the
-        EEA/UK/Switzerland.
+        .
       </p>
       <p className="mb-8 text-zinc-600 dark:text-zinc-400">
         This policy should be read together with our{' '}
@@ -149,127 +133,31 @@ export default function CookiePolicyPage() {
         </p>
         <CookieTable />
         <p className="mt-4 text-sm">
-          <strong className="text-zinc-900 dark:text-zinc-100">Note:</strong> We use Google
-          Analytics (GA4) to understand how visitors interact with the Site. Our developer tools
+          <strong className="text-zinc-900 dark:text-zinc-100">Note:</strong> Our developer tools
           process data entirely in your browser without sending it to our servers.
         </p>
       </Section>
 
-      <Section title="Advertising Cookies (Google AdSense)">
-        <p>
-          We may display advertisements on this Site using{' '}
-          <strong className="text-zinc-900 dark:text-zinc-100">Google AdSense</strong>. If ads are
-          displayed, Google and its advertising partners may use cookies and device identifiers for
-          the following purposes:
-        </p>
-        <ul className="list-disc space-y-2 pl-5">
-          <li>
-            <strong className="text-zinc-900 dark:text-zinc-100">Ad delivery:</strong> Serve ads to
-            your browser
-          </li>
-          <li>
-            <strong className="text-zinc-900 dark:text-zinc-100">Frequency capping:</strong> Limit
-            how often you see the same ad
-          </li>
-          <li>
-            <strong className="text-zinc-900 dark:text-zinc-100">Fraud prevention:</strong> Detect
-            invalid clicks and protect advertisers
-          </li>
-          <li>
-            <strong className="text-zinc-900 dark:text-zinc-100">Measurement:</strong> Measure ad
-            impressions and report aggregate statistics
-          </li>
-          <li>
-            <strong className="text-zinc-900 dark:text-zinc-100">Personalization:</strong> (With
-            consent) Show ads based on your interests and browsing history
-          </li>
-        </ul>
-        <p>
-          Learn more about how Google uses your data:{' '}
-          <a
-            href="https://policies.google.com/technologies/partner-sites"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary hover:text-primary-hover underline"
-          >
-            How Google uses information from sites that use Google services
-          </a>
-        </p>
-      </Section>
-
-      <Section title="Your Consent (EEA / UK / Switzerland)">
+      <Section title="Non-essential Cookies and Consent (EEA / UK / Switzerland)">
         <p>
           Under the EU ePrivacy Directive (implemented in Spain via LSSI-CE Article 22.2) and GDPR,
-          we must obtain your{' '}
-          <strong className="text-zinc-900 dark:text-zinc-100">prior consent</strong> before setting
-          non-essential cookies (such as advertising cookies) on your device, where those cookies
-          are used.
+          non-essential cookies (such as advertising or analytics cookies) generally require{' '}
+          <strong className="text-zinc-900 dark:text-zinc-100">prior consent</strong> where they are
+          used.
         </p>
         <p>
-          If advertising cookies/identifiers are used and you visit from the EEA, UK, or
-          Switzerland, you may see a{' '}
-          <strong className="text-zinc-900 dark:text-zinc-100">consent message</strong> (the
-          &quot;first layer&quot;) that provides:
-        </p>
-        <ul className="list-disc space-y-1 pl-5">
-          <li>Clear information about cookie use</li>
-          <li>
-            An <strong>Accept</strong> button to consent to all cookies
-          </li>
-          <li>
-            A <strong>Reject</strong> button to decline non-essential cookies
-          </li>
-          <li>
-            A <strong>Manage preferences</strong> option for granular control
-          </li>
-        </ul>
-        <p>
-          All options are presented with{' '}
-          <strong className="text-zinc-900 dark:text-zinc-100">equal prominence</strong> as required
-          by AEPD guidelines (no pre-selected boxes, no dark patterns).
+          <strong className="text-zinc-900 dark:text-zinc-100">Current status:</strong> We do not
+          currently use advertising or analytics cookies on this Site. For that reason, a cookie
+          consent pop-up is not shown at this time.
         </p>
         <p>
-          If you do not consent, advertising cookies should not be set, and you may see only
-          contextual or limited ads (if available).
-        </p>
-      </Section>
-
-      <Section title="How to Withdraw or Change Your Consent">
-        <p>
-          You have the right to{' '}
-          <strong className="text-zinc-900 dark:text-zinc-100">withdraw your consent</strong> at any
-          time. Withdrawal is as easy as giving consent. You can change your cookie preferences
-          using any of these methods:
-        </p>
-        <ul className="list-disc space-y-2 pl-5">
-          <li>
-            <strong className="text-zinc-900 dark:text-zinc-100">Consent message controls:</strong>{' '}
-            Use the controls and links provided in the consent message (where shown) to revisit your
-            choices. In some cases, Google may also provide a &quot;privacy and cookie
-            settings&quot; link on the site to reopen the message.
-          </li>
-          <li>
-            <strong className="text-zinc-900 dark:text-zinc-100">Browser settings:</strong> Delete
-            cookies and reload the page to see the consent banner again, or block third-party
-            cookies entirely in your browser.
-          </li>
-          <li>
-            <strong className="text-zinc-900 dark:text-zinc-100">Google Ad Center:</strong> Manage
-            ad personalization across Google services at{' '}
-            <a
-              href="https://myadcenter.google.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:text-primary-hover underline"
-            >
-              My Ad Center
-            </a>
-            .
-          </li>
-        </ul>
-        <p>
-          <strong className="text-zinc-900 dark:text-zinc-100">Important:</strong> Withdrawing
-          consent does not affect the lawfulness of processing based on consent before withdrawal.
+          If we enable non-essential cookies in the future (for example, by turning on ads or
+          third-party analytics), we will provide an appropriate consent mechanism and update this
+          Cookie Policy and our{' '}
+          <Link href="/privacy-policy" className="text-primary hover:text-primary-hover underline">
+            Privacy Policy
+          </Link>
+          .
         </p>
       </Section>
 
@@ -328,7 +216,7 @@ export default function CookiePolicyPage() {
         </ul>
         <p className="mt-2 text-sm">
           <strong className="text-zinc-900 dark:text-zinc-100">Note:</strong> Blocking cookies may
-          affect site functionality, ad delivery, or frequency capping.
+          affect site functionality.
         </p>
       </Section>
 
