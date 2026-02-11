@@ -124,8 +124,10 @@ export default function PrivacyPolicyPage() {
           </li>
           <li>
             <strong className="text-zinc-900 dark:text-zinc-100">Cookies / identifiers:</strong> We
-            do not set our own advertising cookies. However, if ads are displayed, third parties
-            (notably Google) may set cookies or use device identifiers when you view pages with ads.
+            use Google Analytics (GA4) to collect aggregated usage data (page views, engagement
+            metrics). We do not set our own advertising cookies. However, if ads are displayed,
+            third parties (notably Google) may set cookies or use device identifiers when you view
+            pages with ads.
           </li>
         </ul>
       </Section>
@@ -232,6 +234,11 @@ export default function PrivacyPolicyPage() {
           <li>
             <strong className="text-zinc-900 dark:text-zinc-100">Google (AdSense):</strong> if ads
             are displayed, to serve and measure ads.
+          </li>
+          <li>
+            <strong className="text-zinc-900 dark:text-zinc-100">Google (Analytics):</strong> to
+            collect aggregated usage statistics (page views, traffic sources, engagement) via Google
+            Analytics 4.
           </li>
           <li>
             <strong className="text-zinc-900 dark:text-zinc-100">

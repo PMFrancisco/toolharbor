@@ -69,6 +69,14 @@ function CookieTable() {
             <td className="px-3 py-2">Google AdSense</td>
             <td className="px-3 py-2">Yes (EEA/UK/CH)</td>
           </tr>
+          <tr className="border-b border-zinc-100 dark:border-zinc-800">
+            <td className="px-3 py-2 font-medium text-zinc-900 dark:text-zinc-100">Analytics</td>
+            <td className="px-3 py-2">
+              Measure site traffic, page views, and user engagement to improve our services
+            </td>
+            <td className="px-3 py-2">Google Analytics (GA4)</td>
+            <td className="px-3 py-2">Yes (EEA/UK/CH)</td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -141,9 +149,9 @@ export default function CookiePolicyPage() {
         </p>
         <CookieTable />
         <p className="mt-4 text-sm">
-          <strong className="text-zinc-900 dark:text-zinc-100">Note:</strong> We do not use our own
-          first-party analytics cookies. Our tools process data entirely in your browser without
-          sending it to our servers.
+          <strong className="text-zinc-900 dark:text-zinc-100">Note:</strong> We use Google
+          Analytics (GA4) to understand how visitors interact with the Site. Our developer tools
+          process data entirely in your browser without sending it to our servers.
         </p>
       </Section>
 

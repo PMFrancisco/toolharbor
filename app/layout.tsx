@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
 import { Inter, JetBrains_Mono } from 'next/font/google';
 import Script from 'next/script';
-import { Header, Footer } from '@/components';
+import { Header, Footer, GoogleAnalytics } from '@/components';
 import { siteConfig } from '@/lib/seo';
 import './globals.css';
 
+const isProduction = process.env.NODE_ENV === 'production';
 const adsenseId = process.env.NEXT_PUBLIC_ADSENSE_ID;
+const gaId = isProduction ? process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID : undefined;
 
 const inter = Inter({
   variable: '--font-inter',
@@ -49,19 +51,38 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {adsenseId && (
+      {(adsenseId || gaId) && (
         <head>
-          <Script
-            async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseId}`}
-            crossOrigin="anonymous"
-            strategy="afterInteractive"
-          />
+          {adsenseId && (
+            <Script
+              async
+              src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseId}`}
+              crossOrigin="anonymous"
+              strategy="afterInteractive"
+            />
+          )}
+          {gaId && (
+            <>
+              <Script
+                src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+                strategy="afterInteractive"
+              />
+              <Script id="ga4-init" strategy="afterInteractive">
+                {`
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${gaId}');
+                `}
+              </Script>
+            </>
+          )}
         </head>
       )}
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} flex min-h-screen flex-col bg-zinc-50 font-sans antialiased dark:bg-zinc-950`}
       >
+        {gaId && <GoogleAnalytics gaId={gaId} />}
         <Header />
         <div className="flex-1">{children}</div>
         <Footer />
