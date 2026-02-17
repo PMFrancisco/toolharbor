@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const siteConfig = {
   name: 'ToolHarbor',
-  url: 'https://toolharbor.dev',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://toolharbor.dev',
   description:
     'Free online developer tools. JSON formatter, Base64 encoder, regex tester, and more. Fast, simple, no login required.',
   author: 'ToolHarbor',

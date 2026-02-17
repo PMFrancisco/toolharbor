@@ -24,24 +24,47 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: `${siteConfig.name} - Free Developer Tools`,
+    default: `${siteConfig.name} — Free Online Developer Tools & Utilities`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  keywords: [
+    'developer tools',
+    'online tools',
+    'free tools',
+    'json formatter',
+    'base64 encoder',
+    'regex tester',
+    'uuid generator',
+    'jwt decoder',
+    'web developer utilities',
+  ],
   metadataBase: new URL(siteConfig.url),
   authors: [{ name: siteConfig.author }],
   creator: siteConfig.author,
   openGraph: {
     type: 'website',
     locale: siteConfig.locale,
+    url: siteConfig.url,
+    title: `${siteConfig.name} — Free Online Developer Tools & Utilities`,
+    description: siteConfig.description,
     siteName: siteConfig.name,
   },
   twitter: {
     card: 'summary_large_image',
+    title: `${siteConfig.name} — Free Online Developer Tools & Utilities`,
+    description: siteConfig.description,
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
