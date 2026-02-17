@@ -32,7 +32,9 @@ export function ToolFAQ({ items }: ToolFAQProps) {
               aria-expanded={openIndex === index}
             >
               <span className="font-medium text-zinc-900 dark:text-zinc-100">{item.question}</span>
-              <span className="ml-4 shrink-0 text-zinc-500">{openIndex === index ? '−' : '+'}</span>
+              <span className="ml-4 shrink-0 text-zinc-500 dark:text-zinc-400">
+                {openIndex === index ? '−' : '+'}
+              </span>
             </button>
             {openIndex === index && (
               <div className="px-4 pb-4">

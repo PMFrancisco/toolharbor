@@ -11,8 +11,8 @@
   --foreground: #171717;
 
   /* Primary accent (links, highlights) */
-  --primary: #2563eb; /* blue-600 */
-  --primary-hover: #1d4ed8; /* blue-700 */
+  --primary: #1d4ed8; /* blue-700 */
+  --primary-hover: #1e40af; /* blue-800 */
 }
 
 @media (prefers-color-scheme: dark) {

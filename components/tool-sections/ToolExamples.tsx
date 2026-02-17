@@ -34,7 +34,9 @@ export function ToolExamples({ examples }: ToolExamplesProps) {
             <div className="grid md:grid-cols-2">
               <div className="border-b border-zinc-200 p-4 md:border-r md:border-b-0 dark:border-zinc-800">
                 <div className="mb-2 flex items-center justify-between">
-                  <p className="text-xs font-medium tracking-wide text-zinc-500 uppercase">Input</p>
+                  <p className="text-xs font-medium tracking-wide text-zinc-500 uppercase dark:text-zinc-400">
+                    Input
+                  </p>
                   <CopyButton text={example.input} size="sm" variant="ghost" />
                 </div>
                 <pre className="overflow-x-auto font-mono text-sm break-all whitespace-pre-wrap text-zinc-800 dark:text-zinc-200">
@@ -43,7 +45,7 @@ export function ToolExamples({ examples }: ToolExamplesProps) {
               </div>
               <div className="p-4">
                 <div className="mb-2 flex items-center justify-between">
-                  <p className="text-xs font-medium tracking-wide text-zinc-500 uppercase">
+                  <p className="text-xs font-medium tracking-wide text-zinc-500 uppercase dark:text-zinc-400">
                     {example.renderHtml ? 'Preview' : 'Output'}
                   </p>
                   <CopyButton text={example.output} size="sm" variant="ghost" />

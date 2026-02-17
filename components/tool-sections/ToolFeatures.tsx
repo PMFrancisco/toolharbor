@@ -9,7 +9,7 @@ export function ToolFeatures({ features }: ToolFeaturesProps) {
       <ul className="grid gap-2 sm:grid-cols-2">
         {features.map((feature, index) => (
           <li key={index} className="flex items-start gap-2">
-            <span className="mt-1 text-green-500">✓</span>
+            <span className="mt-1 text-green-600">✓</span>
             <span className="text-zinc-700 dark:text-zinc-300">{feature}</span>
           </li>
         ))}
