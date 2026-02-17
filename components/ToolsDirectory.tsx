@@ -1,41 +1,29 @@
 'use client';
 
-import { useState, useMemo, useEffect, Suspense } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useState, useMemo } from 'react';
 import { Input, CategoryFilter } from '@/components/ui';
 import { ToolCard } from './ToolCard';
 import type { Tool, ToolCategory } from '@/lib/tools-registry';
 
 interface ToolsDirectoryProps {
   tools: Tool[];
+  initialCategory?: string | null;
 }
 
-function ToolsDirectoryContent({ tools }: ToolsDirectoryProps) {
-  const searchParams = useSearchParams();
-  const categoryFromUrl = searchParams.get('category');
-
+export function ToolsDirectory({ tools, initialCategory = null }: ToolsDirectoryProps) {
   const [search, setSearch] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(categoryFromUrl || null);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(initialCategory);
 
-  // Update selected category when URL changes
-  useEffect(() => {
-    setSelectedCategory(categoryFromUrl);
-  }, [categoryFromUrl]);
-
-  // Get unique categories
   const categories = useMemo(() => {
     return Array.from(new Set(tools.map((t) => t.category))).sort();
   }, [tools]);
 
-  // Filter tools based on search query and selected category
   const filteredTools = useMemo(() => {
     return tools.filter((tool) => {
-      // Category filter
       if (selectedCategory && tool.category !== selectedCategory) {
         return false;
       }
 
-      // Search filter
       if (search) {
         const query = search.toLowerCase();
         return (
@@ -49,7 +37,6 @@ function ToolsDirectoryContent({ tools }: ToolsDirectoryProps) {
     });
   }, [tools, search, selectedCategory]);
 
-  // Group tools by category
   const groupedTools = useMemo(() => {
     const groups: Record<ToolCategory, Tool[]> = {} as Record<ToolCategory, Tool[]>;
 
@@ -67,7 +54,6 @@ function ToolsDirectoryContent({ tools }: ToolsDirectoryProps) {
     <div className="space-y-8">
       {/* Search and Filter Controls */}
       <div className="space-y-4">
-        {/* Search Bar */}
         <div className="mx-auto max-w-2xl">
           <Input
             placeholder="Search tools (e.g., json, base64, converter)..."
@@ -77,7 +63,6 @@ function ToolsDirectoryContent({ tools }: ToolsDirectoryProps) {
           />
         </div>
 
-        {/* Category Filter Buttons */}
         <CategoryFilter
           options={categories.map((cat) => ({ value: cat, label: cat }))}
           value={selectedCategory}
@@ -123,26 +108,5 @@ function ToolsDirectoryContent({ tools }: ToolsDirectoryProps) {
         </div>
       )}
     </div>
-  );
-}
-
-export function ToolsDirectory({ tools }: ToolsDirectoryProps) {
-  return (
-    <Suspense
-      fallback={
-        <div className="space-y-8">
-          <div className="mx-auto max-w-2xl">
-            <div className="h-12 animate-pulse rounded-md bg-zinc-200 dark:bg-zinc-800" />
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {[...Array(6)].map((_, i) => (
-              <div key={i} className="h-32 animate-pulse rounded-xl bg-zinc-200 dark:bg-zinc-800" />
-            ))}
-          </div>
-        </div>
-      }
-    >
-      <ToolsDirectoryContent tools={tools} />
-    </Suspense>
   );
 }

@@ -282,6 +282,115 @@ export const tools: Tool[] = [
       'Look up MIME types by file extension or content type with a searchable developer reference',
     category: 'Decoders',
   },
+  {
+    slug: 'json-minifier',
+    name: 'JSON Minifier',
+    description: 'Minify and compress JSON data by removing all unnecessary whitespace',
+    category: 'Formatters',
+  },
+  {
+    slug: 'html-minifier',
+    name: 'HTML Minifier',
+    description: 'Minify HTML code by removing whitespace, line breaks, and unnecessary characters',
+    category: 'Formatters',
+  },
+  {
+    slug: 'css-minifier',
+    name: 'CSS Minifier',
+    description: 'Minify CSS code by removing comments, whitespace, and unnecessary characters',
+    category: 'Formatters',
+  },
+  {
+    slug: 'sql-minifier',
+    name: 'SQL Minifier',
+    description: 'Minify SQL queries by removing whitespace and compressing to a single line',
+    category: 'Formatters',
+  },
+  {
+    slug: 'xml-minifier',
+    name: 'XML Minifier',
+    description: 'Minify XML data by removing whitespace and line breaks with validation',
+    category: 'Formatters',
+  },
+  {
+    slug: 'json-to-typescript',
+    name: 'JSON to TypeScript',
+    description: 'Convert JSON data to TypeScript interfaces or type aliases instantly',
+    category: 'Converters',
+  },
+  {
+    slug: 'base64-image-viewer',
+    name: 'Base64 Image Viewer',
+    description:
+      'Preview base64 encoded images with auto format detection, dimensions, and download',
+    category: 'Preview',
+  },
+  {
+    slug: 'curl-to-fetch',
+    name: 'cURL to Fetch Converter',
+    description: 'Convert curl commands to JavaScript fetch() code with headers, body, and auth',
+    category: 'Converters',
+  },
+  {
+    slug: 'json-diff',
+    name: 'JSON Diff',
+    description: 'Compare two JSON objects and see added, removed, and changed values highlighted',
+    category: 'Testers',
+  },
+  {
+    slug: 'json-flatten',
+    name: 'JSON Flatten/Unflatten',
+    description: 'Flatten nested JSON to dot-notation keys or unflatten back to nested structure',
+    category: 'Converters',
+  },
+  {
+    slug: 'hmac-generator',
+    name: 'HMAC Generator',
+    description: 'Generate HMAC-SHA256, HMAC-SHA384, and HMAC-SHA512 with a secret key',
+    category: 'Generators',
+  },
+  {
+    slug: 'nanoid-generator',
+    name: 'NanoID Generator',
+    description: 'Generate cryptographically secure NanoID-style random IDs with custom alphabet',
+    category: 'Generators',
+  },
+  {
+    slug: 'unicode-escape',
+    name: 'Unicode Escape/Unescape',
+    description: 'Escape text to \\uXXXX Unicode sequences or unescape them back to readable text',
+    category: 'Encoders',
+  },
+  {
+    slug: 'ndjson-converter',
+    name: 'NDJSON Converter',
+    description: 'Convert between JSON arrays and NDJSON (Newline Delimited JSON) format',
+    category: 'Converters',
+  },
+  {
+    slug: 'http-header-formatter',
+    name: 'HTTP Header Formatter',
+    description: 'Normalize HTTP headers and convert between raw headers and JSON format',
+    category: 'Formatters',
+  },
+  {
+    slug: 'timestamp-batch',
+    name: 'Timestamp Batch Converter',
+    description: 'Convert multiple Unix timestamps to dates at once with timezone toggle',
+    category: 'Converters',
+  },
+  {
+    slug: 'rsa-key-generator',
+    name: 'RSA Key Pair Generator',
+    description: 'Generate RSA 2048/4096-bit key pairs in PEM format using Web Crypto API',
+    category: 'Generators',
+  },
+  {
+    slug: 'text-to-ascii',
+    name: 'Text to ASCII Converter',
+    description: 'Convert text to ASCII codes (decimal, hex, binary, octal) or codes back to text',
+    category: 'Converters',
+  },
 ];
 
 // Helper functions
