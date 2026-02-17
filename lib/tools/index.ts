@@ -175,3 +175,52 @@ export {
   getDefaultOptions,
 } from './password';
 export type { PasswordOptions, PasswordStrength, PasswordResult } from './password';
+
+export { minifyCss, getByteSize } from './css-minifier';
+export type { CssMinifyResult } from './css-minifier';
+
+export { jsonToTypeScript, outputStyleOptions } from './json-to-typescript';
+export type { OutputStyle, JsonToTsOptions, JsonToTsResult } from './json-to-typescript';
+
+export { parseBase64Image, toDataUrl } from './base64-image';
+export type { ImageInfo, Base64ImageResult } from './base64-image';
+
+export { curlToFetch } from './curl-to-fetch';
+export type { CurlToFetchResult } from './curl-to-fetch';
+
+export { diffJson } from './json-diff';
+export type {
+  DiffType,
+  JsonDiffEntry,
+  JsonDiffResult,
+  JsonDiffError,
+  JsonDiffResponse,
+  JsonDiffOptions,
+} from './json-diff';
+
+export { flattenJson, unflattenJson, flattenModeOptions } from './json-flatten';
+export type { JsonFlattenResult, FlattenMode, FlattenOptions } from './json-flatten';
+
+export { generateAllHmacs, generateHmac, hmacAlgorithms } from './hmac';
+export type { HmacAlgorithm, HmacEntry, HmacResult } from './hmac';
+
+export { generateNanoids, buildAlphabet, alphabetOptions, ALPHABETS } from './nanoid';
+export type { NanoidOptions, AlphabetKey } from './nanoid';
+
+export { escapeUnicode, unescapeUnicode, escapeModeOptions } from './unicode-escape';
+export type { UnicodeEscapeResult, EscapeMode } from './unicode-escape';
+
+export { jsonToNdjson, ndjsonToJson, ndjsonModeOptions } from './ndjson';
+export type { NdjsonResult, NdjsonMode } from './ndjson';
+
+export { normalizeHeaders, headersToJson, jsonToHeaders, headerModeOptions } from './http-headers';
+export type { HeaderFormatResult, HeaderMode } from './http-headers';
+
+export { parseBatchTimestamps, formatBatchResults, timezoneModeOptions } from './timestamp-batch';
+export type { BatchTimestampEntry, TimezoneMode } from './timestamp-batch';
+
+export { generateRsaKeyPair, keySizeOptions } from './rsa-keygen';
+export type { RsaKeyPair, RsaKeySize, RsaKeyResult } from './rsa-keygen';
+
+export { textToAscii, asciiToText, asciiFormatOptions, asciiModeOptions } from './text-to-ascii';
+export type { AsciiFormat, AsciiMode, CharCode, TextToAsciiResult } from './text-to-ascii';

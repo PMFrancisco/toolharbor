@@ -18,7 +18,14 @@ export const metadata: Metadata = generatePageMetadata({
   ],
 });
 
-export default function ToolsPage() {
+export default async function ToolsPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ category?: string }>;
+}) {
+  const params = await searchParams;
+  const initialCategory = params?.category || null;
+
   return (
     <main className="mx-auto max-w-5xl px-4 py-12">
       {/* Page Header */}
@@ -32,7 +39,7 @@ export default function ToolsPage() {
       </header>
 
       {/* Interactive Tools Directory */}
-      <ToolsDirectory tools={tools} />
+      <ToolsDirectory tools={tools} initialCategory={initialCategory} />
     </main>
   );
 }
