@@ -104,6 +104,27 @@ export function generateWebsiteJsonLd() {
 }
 
 /**
+ * Generate JSON-LD WebApplication schema (use on homepage alongside WebSite)
+ */
+export function generateWebApplicationJsonLd() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: siteConfig.name,
+    url: siteConfig.url,
+    description: siteConfig.description,
+    applicationCategory: 'DeveloperApplication',
+    operatingSystem: 'Any',
+    browserRequirements: 'Requires JavaScript',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
+  };
+}
+
+/**
  * Generate JSON-LD for a software tool
  */
 export function generateToolJsonLd({

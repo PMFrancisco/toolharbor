@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { JsonLd, ToolCard } from '@/components';
-import { generateWebsiteJsonLd } from '@/lib/seo';
+import { generateWebsiteJsonLd, generateWebApplicationJsonLd } from '@/lib/seo';
 import { getFeaturedTools, tools } from '@/lib/tools-registry';
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
 
   return (
     <main className="mx-auto max-w-5xl px-4 py-12">
-      <JsonLd data={generateWebsiteJsonLd()} />
+      <JsonLd data={[generateWebsiteJsonLd(), generateWebApplicationJsonLd()]} />
 
       {/* Hero Section - Focus on Value Prop */}
       <section className="mb-20 text-center">
