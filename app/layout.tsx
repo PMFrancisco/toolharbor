@@ -24,20 +24,20 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: `${siteConfig.name} - Free Online Developer Tools & Utilities`,
+    default: `${siteConfig.name} – Fast Browser Tools for Developers`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
   keywords: [
     'developer tools',
-    'online tools',
-    'free tools',
+    'browser tools',
     'json formatter',
+    'jwt decoder',
     'base64 encoder',
     'regex tester',
-    'uuid generator',
-    'jwt decoder',
-    'web developer utilities',
+    'api debugging tools',
+    'data inspection',
+    'online developer utilities',
   ],
   metadataBase: new URL(siteConfig.url),
   authors: [{ name: siteConfig.author }],
@@ -46,13 +46,13 @@ export const metadata: Metadata = {
     type: 'website',
     locale: siteConfig.locale,
     url: siteConfig.url,
-    title: `${siteConfig.name} - Free Online Developer Tools & Utilities`,
+    title: `${siteConfig.name} – Fast Browser Tools for Developers`,
     description: siteConfig.description,
     siteName: siteConfig.name,
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${siteConfig.name} - Free Online Developer Tools & Utilities`,
+    title: `${siteConfig.name} – Fast Browser Tools for Developers`,
     description: siteConfig.description,
   },
   robots: {

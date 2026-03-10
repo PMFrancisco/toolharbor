@@ -4,7 +4,7 @@ export const siteConfig = {
   name: 'ToolHarbor',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://toolharbor.dev',
   description:
-    'Free online developer tools. JSON formatter, Base64 encoder, regex tester, and more. Fast, simple, no login required.',
+    'Fast browser tools for developers. Inspect JSON, decode tokens, parse URLs, convert formats — everything runs locally in your browser.',
   author: 'ToolHarbor',
   locale: 'en_US',
 };
