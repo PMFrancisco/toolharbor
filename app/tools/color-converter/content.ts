@@ -6,10 +6,9 @@ export const toolInfo = {
 };
 
 export const relatedTools = [
-  { name: 'HTML Encoder', href: '/tools/html-encoder' },
-  { name: 'Case Converter', href: '/tools/case-converter' },
-  { name: 'Hash Generator', href: '/tools/hash-generator' },
-  { name: 'Slug Generator', href: '/tools/slug-generator' },
+  { name: 'Number Base Converter', href: '/tools/number-base-converter' },
+  { name: 'CSS Minifier', href: '/tools/css-minifier' },
+  { name: 'HTML Encoder/Decoder', href: '/tools/html-encoder' },
 ];
 
 export const features = [

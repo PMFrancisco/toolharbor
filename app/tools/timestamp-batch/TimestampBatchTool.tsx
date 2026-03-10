@@ -145,6 +145,7 @@ export function TimestampBatchTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<TimestampBatchUI />}
         content={{ features, howToSteps, examples, explanation, faqItems }}
         relatedTools={relatedTools}

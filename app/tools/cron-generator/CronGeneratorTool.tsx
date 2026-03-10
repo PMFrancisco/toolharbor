@@ -209,6 +209,7 @@ export function CronGeneratorTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<CronGeneratorUI />}
         content={{
           features,

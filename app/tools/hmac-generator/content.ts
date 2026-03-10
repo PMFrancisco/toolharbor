@@ -7,9 +7,8 @@ export const toolInfo = {
 
 export const relatedTools = [
   { name: 'Hash Generator', href: '/tools/hash-generator' },
-  { name: 'JWT Decoder', href: '/tools/jwt-decoder' },
   { name: 'JWT Generator', href: '/tools/jwt-generator' },
-  { name: 'Base64 Encoder', href: '/tools/base64-encoder' },
+  { name: 'RSA Key Pair Generator', href: '/tools/rsa-key-generator' },
 ];
 
 export const features = [

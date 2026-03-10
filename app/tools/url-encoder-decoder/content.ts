@@ -6,10 +6,8 @@ export const toolInfo = {
 };
 
 export const relatedTools = [
-  { name: 'Base64 Encoder', href: '/tools/base64-encoder' },
   { name: 'URL Parser', href: '/tools/url-parser' },
   { name: 'Query String Builder', href: '/tools/query-string-builder' },
-  { name: 'HTML Encoder', href: '/tools/html-encoder' },
 ];
 
 export const features = [

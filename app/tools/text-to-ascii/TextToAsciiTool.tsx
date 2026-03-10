@@ -205,6 +205,7 @@ export function TextToAsciiTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<TextToAsciiUI />}
         content={{ features, howToSteps, examples, explanation, faqItems }}
         relatedTools={relatedTools}

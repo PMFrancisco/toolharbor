@@ -146,6 +146,7 @@ export function SqlFormatterTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<SqlFormatterUI />}
         content={{
           features,

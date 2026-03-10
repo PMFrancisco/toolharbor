@@ -7,9 +7,8 @@ export const toolInfo = {
 
 export const relatedTools = [
   { name: 'Unicode Escape/Unescape', href: '/tools/unicode-escape' },
-  { name: 'Base64 Encoder', href: '/tools/base64-encoder' },
   { name: 'Number Base Converter', href: '/tools/number-base-converter' },
-  { name: 'HTML Encoder/Decoder', href: '/tools/html-encoder' },
+  { name: 'Base64 Encoder', href: '/tools/base64-encoder' },
 ];
 
 export const features = [

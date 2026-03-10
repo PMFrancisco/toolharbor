@@ -8,8 +8,7 @@ export const toolInfo = {
 export const relatedTools = [
   { name: 'Case Converter', href: '/tools/case-converter' },
   { name: 'Text Sorter', href: '/tools/text-sorter' },
-  { name: 'Find & Replace', href: '/tools/find-replace' },
-  { name: 'Word Counter', href: '/tools/word-counter' },
+  { name: 'Word & Character Counter', href: '/tools/word-counter' },
 ];
 
 export const features = [

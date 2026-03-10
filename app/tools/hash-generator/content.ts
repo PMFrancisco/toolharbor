@@ -6,9 +6,9 @@ export const toolInfo = {
 };
 
 export const relatedTools = [
-  { name: 'UUID Generator', href: '/tools/uuid-generator' },
+  { name: 'HMAC Generator', href: '/tools/hmac-generator' },
+  { name: 'Password Generator', href: '/tools/password-generator' },
   { name: 'Base64 Encoder', href: '/tools/base64-encoder' },
-  { name: 'JWT Decoder', href: '/tools/jwt-decoder' },
 ];
 
 export const features = [

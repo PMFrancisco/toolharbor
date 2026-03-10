@@ -9,7 +9,6 @@ export const relatedTools = [
   { name: 'Cron Expression Generator', href: '/tools/cron-generator' },
   { name: 'Timestamp Converter', href: '/tools/timestamp-converter' },
   { name: 'Regex Tester', href: '/tools/regex-tester' },
-  { name: 'JSON Formatter', href: '/tools/json-formatter' },
 ];
 
 export const features = [

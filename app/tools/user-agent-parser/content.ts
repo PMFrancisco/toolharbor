@@ -6,10 +6,9 @@ export const toolInfo = {
 };
 
 export const relatedTools = [
-  { name: 'JWT Decoder', href: '/tools/jwt-decoder' },
-  { name: 'URL Parser', href: '/tools/url-parser' },
+  { name: 'HTTP Status Code Lookup', href: '/tools/http-status-lookup' },
+  { name: 'MIME Type Lookup', href: '/tools/mime-type-lookup' },
   { name: 'JSON Formatter', href: '/tools/json-formatter' },
-  { name: 'Base64 Encoder', href: '/tools/base64-encoder' },
 ];
 
 export const features = [

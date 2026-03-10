@@ -9,7 +9,6 @@ export const relatedTools = [
   { name: 'SQL Formatter', href: '/tools/sql-formatter' },
   { name: 'JSON Minifier', href: '/tools/json-minifier' },
   { name: 'CSV to JSON Converter', href: '/tools/csv-json-converter' },
-  { name: 'HTML Minifier', href: '/tools/html-minifier' },
 ];
 
 export const features = [

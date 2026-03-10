@@ -97,6 +97,7 @@ export function UuidTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<UuidUI />}
         content={{
           features,

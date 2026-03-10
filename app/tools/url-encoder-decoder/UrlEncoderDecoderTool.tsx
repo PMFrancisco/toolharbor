@@ -224,6 +224,7 @@ export function UrlEncoderDecoderTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<UrlEncoderDecoderUI />}
         content={{
           features,

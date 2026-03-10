@@ -179,6 +179,7 @@ export function Base64ImageViewerTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<Base64ImageViewerUI />}
         content={{
           features,

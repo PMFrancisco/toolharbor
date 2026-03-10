@@ -125,6 +125,7 @@ export function Base64Tool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<Base64UI />}
         content={{
           features,

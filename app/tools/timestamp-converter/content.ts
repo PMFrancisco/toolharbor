@@ -6,10 +6,9 @@ export const toolInfo = {
 };
 
 export const relatedTools = [
-  { name: 'JWT Decoder', href: '/tools/jwt-decoder' },
+  { name: 'Timestamp Batch Converter', href: '/tools/timestamp-batch' },
+  { name: 'Cron Expression Parser', href: '/tools/cron-parser' },
   { name: 'UUID Generator', href: '/tools/uuid-generator' },
-  { name: 'JSON Formatter', href: '/tools/json-formatter' },
-  { name: 'Hash Generator', href: '/tools/hash-generator' },
 ];
 
 export const features = [

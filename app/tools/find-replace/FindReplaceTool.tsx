@@ -164,6 +164,7 @@ export function FindReplaceTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<FindReplaceUI />}
         content={{
           features,

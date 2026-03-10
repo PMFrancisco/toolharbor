@@ -158,6 +158,7 @@ export function HashGeneratorTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<HashGeneratorUI />}
         content={{
           features,

@@ -151,6 +151,7 @@ export function NdjsonConverterTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<NdjsonConverterUI />}
         content={{ features, howToSteps, examples, explanation, faqItems }}
         relatedTools={relatedTools}

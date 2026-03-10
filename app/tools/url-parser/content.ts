@@ -8,8 +8,7 @@ export const toolInfo = {
 export const relatedTools = [
   { name: 'Query String Builder', href: '/tools/query-string-builder' },
   { name: 'URL Encoder/Decoder', href: '/tools/url-encoder-decoder' },
-  { name: 'Slug Generator', href: '/tools/slug-generator' },
-  { name: 'HTML Encoder', href: '/tools/html-encoder' },
+  { name: 'HTTP Status Code Lookup', href: '/tools/http-status-lookup' },
 ];
 
 export const features = [

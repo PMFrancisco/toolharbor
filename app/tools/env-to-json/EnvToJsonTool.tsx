@@ -156,6 +156,7 @@ export function EnvToJsonTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<EnvToJsonUI />}
         content={{
           features,

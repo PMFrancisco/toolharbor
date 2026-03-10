@@ -113,6 +113,7 @@ export function LoremIpsumTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<LoremIpsumUI />}
         content={{
           features,

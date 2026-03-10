@@ -136,6 +136,7 @@ export function TextSorterTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<TextSorterUI />}
         content={{
           features,

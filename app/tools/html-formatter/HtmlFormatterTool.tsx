@@ -138,6 +138,7 @@ export function HtmlFormatterTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<HtmlFormatterUI />}
         content={{
           features,

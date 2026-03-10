@@ -7,8 +7,7 @@ export const toolInfo = {
 
 export const relatedTools = [
   { name: 'JWT Decoder', href: '/tools/jwt-decoder' },
-  { name: 'Base64 Encoder', href: '/tools/base64-encoder' },
-  { name: 'Hash Generator', href: '/tools/hash-generator' },
+  { name: 'HMAC Generator', href: '/tools/hmac-generator' },
   { name: 'Timestamp Converter', href: '/tools/timestamp-converter' },
 ];
 

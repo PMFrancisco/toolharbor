@@ -7,7 +7,6 @@ export const toolInfo = {
 
 export const relatedTools = [
   { name: 'Base64 Encoder', href: '/tools/base64-encoder' },
-  { name: 'Hash Generator', href: '/tools/hash-generator' },
   { name: 'Color Converter', href: '/tools/color-converter' },
   { name: 'HTML Encoder/Decoder', href: '/tools/html-encoder' },
 ];

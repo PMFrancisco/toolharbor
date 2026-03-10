@@ -235,6 +235,7 @@ export function TimestampConverterTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<TimestampConverterUI />}
         content={{
           features,

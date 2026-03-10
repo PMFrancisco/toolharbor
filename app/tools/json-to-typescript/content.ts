@@ -6,10 +6,9 @@ export const toolInfo = {
 };
 
 export const relatedTools = [
-  { name: 'JSON Formatter', href: '/tools/json-formatter' },
   { name: 'JSON Schema Validator', href: '/tools/json-schema-validator' },
+  { name: 'JSON Formatter', href: '/tools/json-formatter' },
   { name: 'JSON to YAML Converter', href: '/tools/json-yaml-converter' },
-  { name: 'JSON to CSV Converter', href: '/tools/json-csv-converter' },
 ];
 
 export const features = [

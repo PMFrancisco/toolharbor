@@ -6,10 +6,9 @@ export const toolInfo = {
 };
 
 export const relatedTools = [
+  { name: 'NanoID Generator', href: '/tools/nanoid-generator' },
+  { name: 'Password Generator', href: '/tools/password-generator' },
   { name: 'Timestamp Converter', href: '/tools/timestamp-converter' },
-  { name: 'Hash Generator', href: '/tools/hash-generator' },
-  { name: 'Slug Generator', href: '/tools/slug-generator' },
-  { name: 'JSON Formatter', href: '/tools/json-formatter' },
 ];
 
 export const features = [

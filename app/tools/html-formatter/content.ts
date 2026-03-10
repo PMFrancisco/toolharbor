@@ -6,10 +6,9 @@ export const toolInfo = {
 };
 
 export const relatedTools = [
-  { name: 'XML Formatter', href: '/tools/xml-formatter' },
+  { name: 'HTML Minifier', href: '/tools/html-minifier' },
   { name: 'HTML Encoder/Decoder', href: '/tools/html-encoder' },
-  { name: 'JSON Formatter', href: '/tools/json-formatter' },
-  { name: 'YAML Formatter', href: '/tools/yaml-formatter' },
+  { name: 'Markdown Preview', href: '/tools/markdown-preview' },
 ];
 
 export const features = [

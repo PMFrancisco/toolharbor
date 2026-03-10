@@ -6,9 +6,8 @@ export const toolInfo = {
 };
 
 export const relatedTools = [
-  { name: 'JSON Formatter', href: '/tools/json-formatter' },
+  { name: 'SQL Minifier', href: '/tools/sql-minifier' },
   { name: 'CSV to JSON Converter', href: '/tools/csv-json-converter' },
-  { name: 'JSON to CSV Converter', href: '/tools/json-csv-converter' },
   { name: 'Regex Tester', href: '/tools/regex-tester' },
 ];
 

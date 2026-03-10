@@ -6,10 +6,9 @@ export const toolInfo = {
 };
 
 export const relatedTools = [
-  { name: 'URL Parser', href: '/tools/url-parser' },
+  { name: 'HTTP Status Code Lookup', href: '/tools/http-status-lookup' },
   { name: 'User Agent Parser', href: '/tools/user-agent-parser' },
-  { name: 'JSON Formatter', href: '/tools/json-formatter' },
-  { name: 'Base64 Encoder', href: '/tools/base64-encoder' },
+  { name: 'URL Parser', href: '/tools/url-parser' },
 ];
 
 export const features = [

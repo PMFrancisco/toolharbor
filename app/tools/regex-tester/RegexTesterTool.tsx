@@ -232,6 +232,7 @@ export function RegexTesterTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<RegexTesterUI />}
         content={{
           features,

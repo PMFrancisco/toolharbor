@@ -140,6 +140,7 @@ export function UnicodeEscapeTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<UnicodeEscapeUI />}
         content={{ features, howToSteps, examples, explanation, faqItems }}
         relatedTools={relatedTools}

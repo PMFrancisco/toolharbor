@@ -7,9 +7,8 @@ export const toolInfo = {
 
 export const relatedTools = [
   { name: 'Case Converter', href: '/tools/case-converter' },
-  { name: 'Find & Replace', href: '/tools/find-replace' },
-  { name: 'Remove Duplicates', href: '/tools/remove-duplicates' },
   { name: 'Markdown Preview', href: '/tools/markdown-preview' },
+  { name: 'Lorem Ipsum Generator', href: '/tools/lorem-ipsum-generator' },
 ];
 
 export const features = [

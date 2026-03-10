@@ -164,6 +164,7 @@ export function CssMinifierTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<CssMinifierUI />}
         content={{
           features,

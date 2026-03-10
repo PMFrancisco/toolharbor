@@ -186,6 +186,7 @@ export function UserAgentParserTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<UserAgentParserUI />}
         content={{
           features,

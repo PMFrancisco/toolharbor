@@ -180,6 +180,7 @@ export function PasswordGeneratorTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<PasswordGeneratorUI />}
         content={{
           features,

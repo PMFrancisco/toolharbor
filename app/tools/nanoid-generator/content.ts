@@ -9,7 +9,6 @@ export const relatedTools = [
   { name: 'UUID Generator', href: '/tools/uuid-generator' },
   { name: 'Password Generator', href: '/tools/password-generator' },
   { name: 'Hash Generator', href: '/tools/hash-generator' },
-  { name: 'Slug Generator', href: '/tools/slug-generator' },
 ];
 
 export const features = [

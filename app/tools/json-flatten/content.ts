@@ -6,9 +6,8 @@ export const toolInfo = {
 };
 
 export const relatedTools = [
-  { name: 'JSON Formatter', href: '/tools/json-formatter' },
   { name: 'JSON Diff', href: '/tools/json-diff' },
-  { name: 'JSON to CSV Converter', href: '/tools/json-csv-converter' },
+  { name: 'JSON Formatter', href: '/tools/json-formatter' },
   { name: 'JSON to TypeScript', href: '/tools/json-to-typescript' },
 ];
 

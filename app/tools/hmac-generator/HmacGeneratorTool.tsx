@@ -172,6 +172,7 @@ export function HmacGeneratorTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<HmacGeneratorUI />}
         content={{
           features,

@@ -6,10 +6,9 @@ export const toolInfo = {
 };
 
 export const relatedTools = [
+  { name: 'Text Sorter', href: '/tools/text-sorter' },
   { name: 'Find & Replace', href: '/tools/find-replace' },
-  { name: 'Word Counter', href: '/tools/word-counter' },
-  { name: 'Case Converter', href: '/tools/case-converter' },
-  { name: 'Slug Generator', href: '/tools/slug-generator' },
+  { name: 'Word & Character Counter', href: '/tools/word-counter' },
 ];
 
 export const features = [

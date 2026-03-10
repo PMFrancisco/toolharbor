@@ -118,6 +118,7 @@ export function MimeTypeLookupTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<MimeTypeLookupUI />}
         content={{ features, howToSteps, examples, explanation, faqItems }}
         relatedTools={relatedTools}

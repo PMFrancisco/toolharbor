@@ -6,10 +6,9 @@ export const toolInfo = {
 };
 
 export const relatedTools = [
-  { name: 'JSON Formatter', href: '/tools/json-formatter' },
-  { name: 'URL Encoder/Decoder', href: '/tools/url-encoder-decoder' },
+  { name: 'HTTP Header Formatter', href: '/tools/http-header-formatter' },
   { name: 'HTTP Status Code Lookup', href: '/tools/http-status-lookup' },
-  { name: 'JSON to TypeScript', href: '/tools/json-to-typescript' },
+  { name: 'JSON Formatter', href: '/tools/json-formatter' },
 ];
 
 export const features = [

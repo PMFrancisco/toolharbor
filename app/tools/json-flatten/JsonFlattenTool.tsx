@@ -174,6 +174,7 @@ export function JsonFlattenTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<JsonFlattenUI />}
         content={{
           features,

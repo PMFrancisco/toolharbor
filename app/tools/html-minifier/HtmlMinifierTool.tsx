@@ -144,6 +144,7 @@ export function HtmlMinifierTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<HtmlMinifierUI />}
         content={{
           features,

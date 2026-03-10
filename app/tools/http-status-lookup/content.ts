@@ -6,10 +6,9 @@ export const toolInfo = {
 };
 
 export const relatedTools = [
-  { name: 'URL Parser', href: '/tools/url-parser' },
-  { name: 'User Agent Parser', href: '/tools/user-agent-parser' },
-  { name: 'JSON Formatter', href: '/tools/json-formatter' },
-  { name: 'JWT Decoder', href: '/tools/jwt-decoder' },
+  { name: 'MIME Type Lookup', href: '/tools/mime-type-lookup' },
+  { name: 'cURL to Fetch Converter', href: '/tools/curl-to-fetch' },
+  { name: 'HTTP Header Formatter', href: '/tools/http-header-formatter' },
 ];
 
 export const features = [

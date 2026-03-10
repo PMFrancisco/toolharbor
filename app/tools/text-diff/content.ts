@@ -6,10 +6,9 @@ export const toolInfo = {
 };
 
 export const relatedTools = [
+  { name: 'JSON Diff', href: '/tools/json-diff' },
   { name: 'Find & Replace', href: '/tools/find-replace' },
-  { name: 'Remove Duplicates', href: '/tools/remove-duplicates' },
-  { name: 'Text Sorter', href: '/tools/text-sorter' },
-  { name: 'Word Counter', href: '/tools/word-counter' },
+  { name: 'Regex Tester', href: '/tools/regex-tester' },
 ];
 
 export const features = [

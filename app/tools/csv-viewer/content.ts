@@ -8,7 +8,6 @@ export const toolInfo = {
 export const relatedTools = [
   { name: 'CSV to JSON Converter', href: '/tools/csv-json-converter' },
   { name: 'JSON to CSV Converter', href: '/tools/json-csv-converter' },
-  { name: 'JSON Formatter', href: '/tools/json-formatter' },
   { name: 'SQL Formatter', href: '/tools/sql-formatter' },
 ];
 

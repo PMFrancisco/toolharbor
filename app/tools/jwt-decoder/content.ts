@@ -6,10 +6,9 @@ export const toolInfo = {
 };
 
 export const relatedTools = [
+  { name: 'JWT Generator', href: '/tools/jwt-generator' },
   { name: 'Base64 Encoder', href: '/tools/base64-encoder' },
-  { name: 'Hash Generator', href: '/tools/hash-generator' },
   { name: 'Timestamp Converter', href: '/tools/timestamp-converter' },
-  { name: 'JSON Formatter', href: '/tools/json-formatter' },
 ];
 
 export const features = [

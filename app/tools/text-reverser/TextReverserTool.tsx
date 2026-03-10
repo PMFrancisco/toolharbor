@@ -101,6 +101,7 @@ export function TextReverserTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<TextReverserUI />}
         content={{
           features,

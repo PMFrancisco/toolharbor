@@ -6,9 +6,8 @@ export const toolInfo = {
 };
 
 export const relatedTools = [
+  { name: 'JWT Generator', href: '/tools/jwt-generator' },
   { name: 'HMAC Generator', href: '/tools/hmac-generator' },
-  { name: 'Hash Generator', href: '/tools/hash-generator' },
-  { name: 'JWT Decoder', href: '/tools/jwt-decoder' },
   { name: 'Password Generator', href: '/tools/password-generator' },
 ];
 

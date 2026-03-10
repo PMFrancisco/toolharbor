@@ -221,6 +221,7 @@ export function JsonDiffTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<JsonDiffUI />}
         content={{
           features,

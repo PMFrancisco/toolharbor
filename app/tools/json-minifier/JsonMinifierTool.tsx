@@ -138,6 +138,7 @@ export function JsonMinifierTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<JsonMinifierUI />}
         content={{
           features,

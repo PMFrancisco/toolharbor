@@ -173,6 +173,7 @@ export function CsvViewerTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<CsvViewerUI />}
         content={{
           features,

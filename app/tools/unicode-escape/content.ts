@@ -7,9 +7,7 @@ export const toolInfo = {
 
 export const relatedTools = [
   { name: 'Text to ASCII Converter', href: '/tools/text-to-ascii' },
-  { name: 'Base64 Encoder', href: '/tools/base64-encoder' },
-  { name: 'URL Encoder/Decoder', href: '/tools/url-encoder-decoder' },
-  { name: 'HTML Encoder/Decoder', href: '/tools/html-encoder' },
+  { name: 'Number Base Converter', href: '/tools/number-base-converter' },
 ];
 
 export const features = [

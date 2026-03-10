@@ -162,6 +162,7 @@ export function YamlFormatterTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<YamlFormatterUI />}
         content={{
           features,

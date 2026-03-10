@@ -156,6 +156,7 @@ export function LineNumbersTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<LineNumbersUI />}
         content={{
           features,

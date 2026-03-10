@@ -6,10 +6,9 @@ export const toolInfo = {
 };
 
 export const relatedTools = [
-  { name: 'HTML Encoder', href: '/tools/html-encoder' },
-  { name: 'Word Counter', href: '/tools/word-counter' },
-  { name: 'Color Converter', href: '/tools/color-converter' },
-  { name: 'Regex Tester', href: '/tools/regex-tester' },
+  { name: 'HTML Encoder/Decoder', href: '/tools/html-encoder' },
+  { name: 'Word & Character Counter', href: '/tools/word-counter' },
+  { name: 'HTML Formatter', href: '/tools/html-formatter' },
 ];
 
 export const features = [

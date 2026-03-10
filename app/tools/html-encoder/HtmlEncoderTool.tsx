@@ -131,6 +131,7 @@ export function HtmlEncoderTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<HtmlEncoderUI />}
         content={{
           features,

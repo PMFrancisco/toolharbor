@@ -9,7 +9,6 @@ export const relatedTools = [
   { name: 'Text Diff Checker', href: '/tools/text-diff' },
   { name: 'JSON Formatter', href: '/tools/json-formatter' },
   { name: 'JSON Flatten/Unflatten', href: '/tools/json-flatten' },
-  { name: 'JSON to TypeScript', href: '/tools/json-to-typescript' },
 ];
 
 export const features = [

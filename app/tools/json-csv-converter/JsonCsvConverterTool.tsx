@@ -184,6 +184,7 @@ export function JsonCsvConverterTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<JsonCsvConverterUI />}
         content={{
           features,

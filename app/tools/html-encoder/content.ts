@@ -6,10 +6,8 @@ export const toolInfo = {
 };
 
 export const relatedTools = [
-  { name: 'URL Encoder/Decoder', href: '/tools/url-encoder-decoder' },
-  { name: 'Base64 Encoder', href: '/tools/base64-encoder' },
+  { name: 'HTML Formatter', href: '/tools/html-formatter' },
   { name: 'Markdown Preview', href: '/tools/markdown-preview' },
-  { name: 'Color Converter', href: '/tools/color-converter' },
 ];
 
 export const features = [

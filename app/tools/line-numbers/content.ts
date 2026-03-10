@@ -7,8 +7,7 @@ export const toolInfo = {
 
 export const relatedTools = [
   { name: 'Text Sorter', href: '/tools/text-sorter' },
-  { name: 'Remove Duplicates', href: '/tools/remove-duplicates' },
-  { name: 'Word Counter', href: '/tools/word-counter' },
+  { name: 'Word & Character Counter', href: '/tools/word-counter' },
   { name: 'Find & Replace', href: '/tools/find-replace' },
 ];
 

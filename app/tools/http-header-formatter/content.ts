@@ -7,7 +7,6 @@ export const toolInfo = {
 export const relatedTools = [
   { name: 'HTTP Status Code Lookup', href: '/tools/http-status-lookup' },
   { name: 'cURL to Fetch Converter', href: '/tools/curl-to-fetch' },
-  { name: 'JSON Formatter', href: '/tools/json-formatter' },
   { name: 'URL Parser', href: '/tools/url-parser' },
 ];
 

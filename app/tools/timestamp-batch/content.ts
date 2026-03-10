@@ -7,9 +7,8 @@ export const toolInfo = {
 
 export const relatedTools = [
   { name: 'Timestamp Converter', href: '/tools/timestamp-converter' },
-  { name: 'JSON Formatter', href: '/tools/json-formatter' },
-  { name: 'Text Sorter', href: '/tools/text-sorter' },
-  { name: 'Remove Duplicates', href: '/tools/remove-duplicates' },
+  { name: 'Cron Expression Parser', href: '/tools/cron-parser' },
+  { name: 'UUID Generator', href: '/tools/uuid-generator' },
 ];
 
 export const features = [

@@ -7,8 +7,8 @@ export const toolInfo = {
 
 export const relatedTools = [
   { name: 'JSON to CSV Converter', href: '/tools/json-csv-converter' },
+  { name: 'CSV Viewer', href: '/tools/csv-viewer' },
   { name: 'JSON Formatter', href: '/tools/json-formatter' },
-  { name: 'JSON to YAML Converter', href: '/tools/json-yaml-converter' },
 ];
 
 export const features = [

@@ -144,6 +144,7 @@ export function XmlMinifierTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<XmlMinifierUI />}
         content={{
           features,

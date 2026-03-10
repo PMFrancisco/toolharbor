@@ -7,9 +7,8 @@ export const toolInfo = {
 
 export const relatedTools = [
   { name: 'Remove Duplicates', href: '/tools/remove-duplicates' },
-  { name: 'Find & Replace', href: '/tools/find-replace' },
-  { name: 'Word Counter', href: '/tools/word-counter' },
-  { name: 'Case Converter', href: '/tools/case-converter' },
+  { name: 'Line Numbering Tool', href: '/tools/line-numbers' },
+  { name: 'Word & Character Counter', href: '/tools/word-counter' },
 ];
 
 export const features = [

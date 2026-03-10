@@ -158,6 +158,7 @@ export function WordCounterTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<WordCounterUI />}
         content={{
           features,

@@ -179,6 +179,7 @@ export function TextDiffTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<TextDiffUI />}
         content={{
           features,

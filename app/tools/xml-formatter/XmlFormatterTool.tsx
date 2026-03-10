@@ -138,6 +138,7 @@ export function XmlFormatterTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<XmlFormatterUI />}
         content={{
           features,

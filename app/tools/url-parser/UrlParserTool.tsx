@@ -196,6 +196,7 @@ export function UrlParserTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<UrlParserUI />}
         content={{
           features,

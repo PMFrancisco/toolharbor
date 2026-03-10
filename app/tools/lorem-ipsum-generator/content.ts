@@ -6,9 +6,8 @@ export const toolInfo = {
 };
 
 export const relatedTools = [
-  { name: 'Word Counter', href: '/tools/word-counter' },
-  { name: 'Text Sorter', href: '/tools/text-sorter' },
-  { name: 'Slug Generator', href: '/tools/slug-generator' },
+  { name: 'Word & Character Counter', href: '/tools/word-counter' },
+  { name: 'Markdown Preview', href: '/tools/markdown-preview' },
   { name: 'UUID Generator', href: '/tools/uuid-generator' },
 ];
 

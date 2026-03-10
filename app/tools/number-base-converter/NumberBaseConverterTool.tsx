@@ -130,6 +130,7 @@ export function NumberBaseConverterTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<NumberBaseConverterUI />}
         content={{
           features,

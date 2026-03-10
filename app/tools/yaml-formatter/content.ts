@@ -8,7 +8,6 @@ export const toolInfo = {
 export const relatedTools = [
   { name: 'JSON to YAML Converter', href: '/tools/json-yaml-converter' },
   { name: 'JSON Formatter', href: '/tools/json-formatter' },
-  { name: 'SQL Formatter', href: '/tools/sql-formatter' },
   { name: 'XML Formatter', href: '/tools/xml-formatter' },
 ];
 

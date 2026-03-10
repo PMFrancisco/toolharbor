@@ -180,6 +180,7 @@ export function JsonYamlConverterTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<JsonYamlConverterUI />}
         content={{
           features,

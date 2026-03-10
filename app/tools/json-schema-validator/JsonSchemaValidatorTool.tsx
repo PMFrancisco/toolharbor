@@ -147,6 +147,7 @@ export function JsonSchemaValidatorTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<JsonSchemaValidatorUI />}
         content={{
           features,

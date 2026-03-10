@@ -114,6 +114,7 @@ export function CurlToFetchTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<CurlToFetchUI />}
         content={{
           features,

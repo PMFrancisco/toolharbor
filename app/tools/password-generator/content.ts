@@ -6,10 +6,9 @@ export const toolInfo = {
 };
 
 export const relatedTools = [
-  { name: 'UUID Generator', href: '/tools/uuid-generator' },
   { name: 'Hash Generator', href: '/tools/hash-generator' },
+  { name: 'UUID Generator', href: '/tools/uuid-generator' },
   { name: 'Base64 Encoder', href: '/tools/base64-encoder' },
-  { name: 'JWT Generator', href: '/tools/jwt-generator' },
 ];
 
 export const features = [

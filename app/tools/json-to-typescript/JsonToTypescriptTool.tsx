@@ -175,6 +175,7 @@ export function JsonToTypescriptTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<JsonToTypescriptUI />}
         content={{
           features,

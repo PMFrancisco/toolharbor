@@ -224,6 +224,7 @@ export function MarkdownPreviewTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<MarkdownPreviewUI />}
         content={{
           features,

@@ -9,7 +9,6 @@ export const relatedTools = [
   { name: 'Cron Expression Parser', href: '/tools/cron-parser' },
   { name: 'Timestamp Converter', href: '/tools/timestamp-converter' },
   { name: 'Regex Tester', href: '/tools/regex-tester' },
-  { name: 'UUID Generator', href: '/tools/uuid-generator' },
 ];
 
 export const features = [

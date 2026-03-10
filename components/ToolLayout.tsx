@@ -7,6 +7,7 @@ import {
   ToolExplanation,
   ToolFAQ,
 } from './tool-sections';
+import { getRelatedTools } from '@/lib/related-tools';
 
 interface RelatedTool {
   name: string;
@@ -49,6 +50,9 @@ interface ToolLayoutProps {
   toolUI: React.ReactNode;
   /** SEO content sections data */
   content: ToolContent;
+  /** Tool slug used for auto-filling related tools from the registry */
+  slug: string;
+  /** Optional manual related tool picks — auto-fill covers remaining slots */
   relatedTools?: RelatedTool[];
   /** Optional ad slot IDs - ads show in dev mode as placeholders */
   adSlots?: AdSlotConfig;
@@ -59,9 +63,11 @@ export function ToolLayout({
   description,
   toolUI,
   content,
-  relatedTools,
+  slug,
+  relatedTools: manualRelatedTools,
   adSlots,
 }: ToolLayoutProps) {
+  const relatedTools = getRelatedTools(slug, manualRelatedTools);
   return (
     <main className="mx-auto max-w-4xl px-4 py-8">
       {/* Tool Header */}

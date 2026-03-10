@@ -6,10 +6,9 @@ export const toolInfo = {
 };
 
 export const relatedTools = [
+  { name: 'Text to ASCII Converter', href: '/tools/text-to-ascii' },
   { name: 'Color Converter', href: '/tools/color-converter' },
   { name: 'Hash Generator', href: '/tools/hash-generator' },
-  { name: 'Timestamp Converter', href: '/tools/timestamp-converter' },
-  { name: 'HTML Encoder/Decoder', href: '/tools/html-encoder' },
 ];
 
 export const features = [

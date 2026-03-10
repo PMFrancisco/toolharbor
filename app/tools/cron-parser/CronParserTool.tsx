@@ -181,6 +181,7 @@ export function CronParserTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<CronParserUI />}
         content={{
           features,

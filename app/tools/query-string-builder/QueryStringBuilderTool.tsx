@@ -163,6 +163,7 @@ export function QueryStringBuilderTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<QueryStringBuilderUI />}
         content={{
           features,

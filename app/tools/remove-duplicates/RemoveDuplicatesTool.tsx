@@ -137,6 +137,7 @@ export function RemoveDuplicatesTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<RemoveDuplicatesUI />}
         content={{
           features,

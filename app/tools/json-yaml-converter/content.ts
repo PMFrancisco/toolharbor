@@ -6,9 +6,9 @@ export const toolInfo = {
 };
 
 export const relatedTools = [
+  { name: 'YAML Formatter', href: '/tools/yaml-formatter' },
   { name: 'JSON Formatter', href: '/tools/json-formatter' },
-  { name: 'CSV to JSON Converter', href: '/tools/csv-json-converter' },
-  { name: 'Markdown Preview', href: '/tools/markdown-preview' },
+  { name: '.env to JSON Converter', href: '/tools/env-to-json' },
 ];
 
 export const features = [

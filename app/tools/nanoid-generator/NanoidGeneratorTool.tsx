@@ -125,6 +125,7 @@ export function NanoidGeneratorTool() {
       <ToolLayout
         title={toolInfo.name}
         description={toolInfo.description}
+        slug={toolInfo.slug}
         toolUI={<NanoidGeneratorUI />}
         content={{
           features,
