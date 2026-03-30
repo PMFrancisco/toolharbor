@@ -25,6 +25,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: getLastModified('app/tools/page.tsx'),
     },
     {
+      url: `${baseUrl}/about`,
+      lastModified: getLastModified('app/about'),
+    },
+    {
       url: `${baseUrl}/privacy-policy`,
       lastModified: getLastModified('app/privacy-policy'),
     },

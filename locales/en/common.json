@@ -1,0 +1,83 @@
+{
+  "header": {
+    "allTools": "All Tools"
+  },
+  "footer": {
+    "copyright": "© {{year}} ToolHarbor. Free developer tools.",
+    "openSource": "Open Source",
+    "privacyPolicy": "Privacy Policy",
+    "cookiePolicy": "Cookie Policy"
+  },
+  "toolLayout": {
+    "features": "Features",
+    "howToUse": "How to Use",
+    "examples": "Examples",
+    "input": "Input",
+    "output": "Output",
+    "preview": "Preview",
+    "faq": "Frequently Asked Questions",
+    "relatedTools": "Related Tools"
+  },
+  "toolsDirectory": {
+    "title": "All Developer Tools",
+    "subtitle": "Free online tools to help you code faster. No sign-up, no tracking, just tools that work.",
+    "searchPlaceholder": "Search tools (e.g., json, base64, converter)...",
+    "allTools": "All Tools",
+    "noResults": "No tools found matching \"{{query}}\"",
+    "clearFilters": "Clear filters"
+  },
+  "home": {
+    "heroTitle": "Fast browser tools for developers",
+    "heroHighlight": "working with data, APIs, and debugging.",
+    "heroSubtitle1": "Inspect JSON, decode tokens, parse URLs, convert formats.",
+    "heroSubtitle2": "Everything runs locally in your browser — no data leaves your machine.",
+    "browseAllTools": "Browse All Tools",
+    "aboutToolHarbor": "About ToolHarbor",
+    "viewAllTools": "View all {{count}} tools →",
+    "whyTitle": "Why developers use ToolHarbor",
+    "moreTools": "More tools for every workflow",
+    "tools": "tools",
+    "runsLocally": "Runs locally",
+    "runsLocallyDesc": "All processing happens in your browser. Your data never leaves your machine.",
+    "noSignUp": "No sign-up",
+    "noSignUpDesc": "No accounts, no login walls, no tracking. Open a tool and start working.",
+    "fastFocused": "Fast & focused",
+    "fastFocusedDesc": "Lightweight tools built for developer workflows — not bloated with ads or upsells.",
+    "openSource": "Open source",
+    "openSourceDesc": "The full source code is public on GitHub. Inspect it, contribute, or fork it."
+  },
+  "workflows": {
+    "Data Inspection & Formatting": "Data Inspection & Formatting",
+    "Auth & Encoding": "Auth & Encoding",
+    "Request Debugging": "Request Debugging",
+    "Patterns & Scheduling": "Patterns & Scheduling",
+    "Format Conversion": "Format Conversion",
+    "Code & Markup": "Code & Markup",
+    "Crypto & Hashing": "Crypto & Hashing",
+    "General Utilities": "General Utilities"
+  },
+  "workflowTaglines": {
+    "Data Inspection & Formatting": "Format, validate, diff, and flatten JSON and structured data.",
+    "Auth & Encoding": "Decode JWTs, encode Base64, and escape strings safely.",
+    "Request Debugging": "Parse URLs, inspect headers, and convert cURL to fetch.",
+    "Patterns & Scheduling": "Test regex patterns, parse cron expressions, and convert timestamps."
+  },
+  "categories": {
+    "Formatters": "Formatters",
+    "Encoders": "Encoders",
+    "Decoders": "Decoders",
+    "Generators": "Generators",
+    "Converters": "Converters",
+    "Testers": "Testers",
+    "Preview": "Preview",
+    "Text Tools": "Text Tools"
+  },
+  "metadata": {
+    "siteTitle": "ToolHarbor – Fast Browser Tools for Developers",
+    "siteDescription": "Fast browser tools for developers. Inspect JSON, decode tokens, parse URLs, convert formats — everything runs locally in your browser."
+  },
+  "languageSwitcher": {
+    "en": "EN",
+    "es": "ES"
+  }
+}

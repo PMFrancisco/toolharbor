@@ -1,0 +1,238 @@
+{
+  "json-formatter": {
+    "name": "JSON Formatter",
+    "description": "Format, validate, and beautify JSON data with syntax highlighting"
+  },
+  "json-minifier": {
+    "name": "JSON Minifier",
+    "description": "Minify and compress JSON data by removing all unnecessary whitespace"
+  },
+  "json-diff": {
+    "name": "JSON Diff",
+    "description": "Compare two JSON objects and see added, removed, and changed values highlighted"
+  },
+  "json-schema-validator": {
+    "name": "JSON Schema Validator",
+    "description": "Validate JSON data against a JSON Schema to check structure and types"
+  },
+  "json-flatten": {
+    "name": "JSON Flatten/Unflatten",
+    "description": "Flatten nested JSON to dot-notation keys or unflatten back to nested structure"
+  },
+  "json-to-typescript": {
+    "name": "JSON to TypeScript",
+    "description": "Convert JSON data to TypeScript interfaces or type aliases instantly"
+  },
+  "jwt-decoder": {
+    "name": "JWT Decoder",
+    "description": "Decode and inspect JSON Web Tokens instantly"
+  },
+  "jwt-generator": {
+    "name": "JWT Generator",
+    "description": "Generate and sign JSON Web Tokens (JWT) for testing with HS256, HS384, HS512"
+  },
+  "base64-encoder": {
+    "name": "Base64 Encoder",
+    "description": "Encode and decode Base64 strings instantly"
+  },
+  "url-encoder-decoder": {
+    "name": "URL Encoder/Decoder",
+    "description": "Encode and decode URLs with percent-encoding"
+  },
+  "html-encoder": {
+    "name": "HTML Encoder/Decoder",
+    "description": "Encode and decode HTML entities to prevent XSS and display HTML safely"
+  },
+  "unicode-escape": {
+    "name": "Unicode Escape/Unescape",
+    "description": "Escape text to \\\\uXXXX Unicode sequences or unescape them back to readable text"
+  },
+  "url-parser": {
+    "name": "URL Parser",
+    "description": "Parse any URL into protocol, host, path, query parameters, and hash"
+  },
+  "curl-to-fetch": {
+    "name": "cURL to Fetch Converter",
+    "description": "Convert curl commands to JavaScript fetch() code with headers, body, and auth"
+  },
+  "http-header-formatter": {
+    "name": "HTTP Header Formatter",
+    "description": "Normalize HTTP headers and convert between raw headers and JSON format"
+  },
+  "query-string-builder": {
+    "name": "Query String Builder",
+    "description": "Build URL query strings from key-value pairs or parse existing URLs"
+  },
+  "http-status-lookup": {
+    "name": "HTTP Status Code Lookup",
+    "description": "Look up any HTTP status code with descriptions, categories, and search"
+  },
+  "mime-type-lookup": {
+    "name": "MIME Type Lookup",
+    "description": "Look up MIME types by file extension or content type with a searchable developer reference"
+  },
+  "user-agent-parser": {
+    "name": "User Agent Parser",
+    "description": "Parse user agent strings to identify browser, OS, device type, and rendering engine"
+  },
+  "regex-tester": {
+    "name": "Regex Tester",
+    "description": "Test and debug regular expressions with real-time matching"
+  },
+  "cron-parser": {
+    "name": "Cron Expression Parser",
+    "description": "Parse and explain cron expressions in plain English with next run times"
+  },
+  "cron-generator": {
+    "name": "Cron Expression Generator",
+    "description": "Generate cron expressions visually with an easy-to-use schedule builder"
+  },
+  "timestamp-converter": {
+    "name": "Timestamp Converter",
+    "description": "Convert Unix timestamps to dates and vice versa"
+  },
+  "timestamp-batch": {
+    "name": "Timestamp Batch Converter",
+    "description": "Convert multiple Unix timestamps to dates at once with timezone toggle"
+  },
+  "json-yaml-converter": {
+    "name": "JSON to YAML Converter",
+    "description": "Convert between JSON and YAML formats instantly"
+  },
+  "json-csv-converter": {
+    "name": "JSON to CSV Converter",
+    "description": "Export JSON arrays to CSV for Excel and spreadsheets"
+  },
+  "csv-json-converter": {
+    "name": "CSV to JSON Converter",
+    "description": "Convert between CSV and JSON formats easily"
+  },
+  "ndjson-converter": {
+    "name": "NDJSON Converter",
+    "description": "Convert between JSON arrays and NDJSON (Newline Delimited JSON) format"
+  },
+  "env-to-json": {
+    "name": ".env to JSON Converter",
+    "description": "Convert .env environment variable files to JSON and back instantly"
+  },
+  "csv-viewer": {
+    "name": "CSV Viewer",
+    "description": "View and preview CSV data as a formatted table with delimiter support"
+  },
+  "base64-image-viewer": {
+    "name": "Base64 Image Viewer",
+    "description": "Preview base64 encoded images with auto format detection, dimensions, and download"
+  },
+  "number-base-converter": {
+    "name": "Number Base Converter",
+    "description": "Convert numbers between binary, decimal, hexadecimal, and octal instantly"
+  },
+  "color-converter": {
+    "name": "Color Converter",
+    "description": "Convert colors between HEX, RGB, and HSL formats with live preview"
+  },
+  "case-converter": {
+    "name": "Case Converter",
+    "description": "Convert text between camelCase, PascalCase, snake_case, kebab-case, and more"
+  },
+  "yaml-formatter": {
+    "name": "YAML Formatter",
+    "description": "Format, validate, and beautify YAML data with key sorting and custom indentation"
+  },
+  "xml-formatter": {
+    "name": "XML Formatter",
+    "description": "Format, validate, and beautify XML data with syntax validation"
+  },
+  "html-formatter": {
+    "name": "HTML Formatter",
+    "description": "Format, beautify, and minify HTML code with proper indentation"
+  },
+  "sql-formatter": {
+    "name": "SQL Formatter",
+    "description": "Format and beautify SQL queries with proper indentation"
+  },
+  "html-minifier": {
+    "name": "HTML Minifier",
+    "description": "Minify HTML code by removing whitespace, line breaks, and unnecessary characters"
+  },
+  "css-minifier": {
+    "name": "CSS Minifier",
+    "description": "Minify CSS code by removing comments, whitespace, and unnecessary characters"
+  },
+  "sql-minifier": {
+    "name": "SQL Minifier",
+    "description": "Minify SQL queries by removing whitespace and compressing to a single line"
+  },
+  "xml-minifier": {
+    "name": "XML Minifier",
+    "description": "Minify XML data by removing whitespace and line breaks with validation"
+  },
+  "markdown-preview": {
+    "name": "Markdown Preview",
+    "description": "Preview Markdown as rendered HTML in real-time"
+  },
+  "hash-generator": {
+    "name": "Hash Generator",
+    "description": "Generate MD5, SHA-1, SHA-256, SHA-384, and SHA-512 hashes"
+  },
+  "hmac-generator": {
+    "name": "HMAC Generator",
+    "description": "Generate HMAC-SHA256, HMAC-SHA384, and HMAC-SHA512 with a secret key"
+  },
+  "rsa-key-generator": {
+    "name": "RSA Key Pair Generator",
+    "description": "Generate RSA 2048/4096-bit key pairs in PEM format using Web Crypto API"
+  },
+  "password-generator": {
+    "name": "Password Generator",
+    "description": "Generate strong, secure random passwords with customizable length and character options"
+  },
+  "text-diff": {
+    "name": "Text Diff Checker",
+    "description": "Compare two texts and see differences highlighted line by line"
+  },
+  "uuid-generator": {
+    "name": "UUID Generator",
+    "description": "Generate random UUIDs (v4) for your applications"
+  },
+  "nanoid-generator": {
+    "name": "NanoID Generator",
+    "description": "Generate cryptographically secure NanoID-style random IDs with custom alphabet"
+  },
+  "slug-generator": {
+    "name": "Slug Generator",
+    "description": "Generate clean, URL-friendly slugs from any text"
+  },
+  "lorem-ipsum-generator": {
+    "name": "Lorem Ipsum Generator",
+    "description": "Generate placeholder text by paragraphs, sentences, or words"
+  },
+  "word-counter": {
+    "name": "Word & Character Counter",
+    "description": "Count words, characters, sentences, and paragraphs with reading time"
+  },
+  "find-replace": {
+    "name": "Find & Replace",
+    "description": "Find and replace text with regex, case sensitivity, and whole word matching"
+  },
+  "remove-duplicates": {
+    "name": "Remove Duplicates",
+    "description": "Remove duplicate lines from any list with trim, case matching, and sorting"
+  },
+  "text-sorter": {
+    "name": "Text Sorter",
+    "description": "Sort lines alphabetically, by length, or randomly with case and trim options"
+  },
+  "line-numbers": {
+    "name": "Line Numbering Tool",
+    "description": "Add line numbers to any text with configurable format, padding, and start number"
+  },
+  "text-reverser": {
+    "name": "Text Reverser",
+    "description": "Reverse text by characters, words, or lines instantly"
+  },
+  "text-to-ascii": {
+    "name": "Text to ASCII Converter",
+    "description": "Convert text to ASCII codes (decimal, hex, binary, octal) or codes back to text"
+  }
+}
