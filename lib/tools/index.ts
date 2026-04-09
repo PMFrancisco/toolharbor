@@ -224,3 +224,34 @@ export type { RsaKeyPair, RsaKeySize, RsaKeyResult } from './rsa-keygen';
 
 export { textToAscii, asciiToText, asciiFormatOptions, asciiModeOptions } from './text-to-ascii';
 export type { AsciiFormat, AsciiMode, CharCode, TextToAsciiResult } from './text-to-ascii';
+
+export { countTokens, formatTokenSummary, formatContextWindow, AI_MODELS } from './token-counter';
+export type { ModelTokenInfo, TokenEstimate, TokenCountResult } from './token-counter';
+
+export { analyzeContext, formatContextSummary } from './context-window';
+export type { UsageLevel, ContextSection, ContextAnalysis } from './context-window';
+
+export { parseTemplateVariables, fillTemplate, formatFilledSummary } from './prompt-template';
+export type { TemplateVariable, TemplateParseResult } from './prompt-template';
+
+export {
+  generateConfigFiles,
+  getDefaultOptions as getDefaultConfigOptions,
+  FRAMEWORK_OPTIONS,
+  LANGUAGE_OPTIONS,
+  STYLING_OPTIONS,
+  PACKAGE_MANAGER_OPTIONS,
+  TEST_RUNNER_OPTIONS,
+  CONVENTION_OPTIONS,
+  CONFIG_PRESETS,
+} from './agent-config';
+export type { AgentConfigOptions, ConfigFile, AgentConfigPreset } from './agent-config';
+
+export { jsonToToon } from './toon';
+export type { ToonResult, ToonStats, ToonConvertSuccess, ToonConvertError } from './toon';
+
+export { generateSchema, createParameter, PARAMETER_TYPES } from './ai-tool-schema';
+export type { SchemaParameter, SchemaFormat } from './ai-tool-schema';
+
+export { toonToJson, validateToon } from './toon-formatter';
+export type { ToonFormatResult } from './toon-formatter';

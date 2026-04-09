@@ -14,7 +14,7 @@ Live site: [toolharbor.dev](https://toolharbor.dev) (browse tools: [toolharbor.d
 - **Rendering:** Static Site Generation (SSG)
 - **Hosting:** Vercel
 
-## Available Tools (59)
+## Available Tools (66)
 
 ### Formatters & Minifiers
 
@@ -110,6 +110,18 @@ Live site: [toolharbor.dev](https://toolharbor.dev) (browse tools: [toolharbor.d
 | [CSV Viewer](https://toolharbor.dev/tools/csv-viewer)                   | View and preview CSV data as a formatted table with delimiter support              |
 | [Base64 Image Viewer](https://toolharbor.dev/tools/base64-image-viewer) | Preview base64 encoded images with auto format detection, dimensions, and download |
 
+### AI Tools
+
+| Tool                                                                                | Description                                                                          |
+| ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| [LLM Token Counter](https://toolharbor.dev/tools/token-counter)                     | Estimate token counts for GPT-4o, Claude, Llama, and Gemini models side by side      |
+| [Context Window Calculator](https://toolharbor.dev/tools/context-window-calculator) | Calculate how much of an LLM context window your prompts use with visual breakdown   |
+| [Prompt Template Formatter](https://toolharbor.dev/tools/prompt-template-formatter) | Create reusable prompt templates with {{variables}} and fill them via a dynamic form |
+| [AI Agent Config Generator](https://toolharbor.dev/tools/agent-config-generator)    | Generate CLAUDE.md, .cursorrules, copilot-instructions.md, and more from your stack  |
+| [AI Tool Schema Builder](https://toolharbor.dev/tools/ai-tool-schema-builder)       | Build function calling schemas for OpenAI and Anthropic Claude visually              |
+| [JSON to TOON Converter](https://toolharbor.dev/tools/json-to-toon-converter)       | Convert JSON to TOON (Token-Oriented Object Notation) and see token savings          |
+| [TOON Formatter & Validator](https://toolharbor.dev/tools/toon-formatter)           | Validate TOON data and convert it back to JSON with syntax checking                  |
+
 ## Getting Started
 
 ### Prerequisites
@@ -151,11 +163,12 @@ toolharbor/
 │   ├── robots.ts               # Robots.txt config
 │   ├── cookie-policy/          # Cookie policy page
 │   ├── privacy-policy/         # Privacy policy page
-│   └── tools/
-│       ├── page.tsx            # Tools index page
-│       ├── json-formatter/     # Each tool has its own folder
-│       ├── base64-encoder/
-│       └── ...                 # 59 tools total
+│   └── [lng]/
+│       └── tools/
+│           ├── page.tsx            # Tools index page
+│           ├── json-formatter/     # Each tool has its own folder
+│           ├── base64-encoder/
+│           └── ...                 # 66 tools total
 ├── components/
 │   ├── Header.tsx              # Site header
 │   ├── Footer.tsx              # Site footer

@@ -12,6 +12,7 @@ export { Select, type SelectProps, type SelectOption } from './Select';
 export { Checkbox, type CheckboxProps } from './Checkbox';
 export { Slider, type SliderProps } from './Slider';
 export { Badge, type BadgeProps, type BadgeVariant } from './Badge';
+export { StatCard, type StatCardProps } from './StatCard';
 export {
   CategoryFilter,
   type CategoryFilterProps,

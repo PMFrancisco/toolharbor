@@ -16,7 +16,8 @@ export type ToolCategory =
   | 'Converters'
   | 'Testers'
   | 'Preview'
-  | 'Text Tools';
+  | 'Text Tools'
+  | 'AI Tools';
 
 export type ToolTier = 'core' | 'supporting' | 'background';
 
@@ -28,7 +29,8 @@ export type ToolWorkflow =
   | 'Format Conversion'
   | 'Code & Markup'
   | 'Crypto & Hashing'
-  | 'General Utilities';
+  | 'General Utilities'
+  | 'AI & LLM';
 
 export interface Tool {
   slug: string;
@@ -530,6 +532,66 @@ export const tools: Tool[] = [
     category: 'Converters',
     tier: 'background',
     workflow: 'General Utilities',
+  },
+  // ── AI & LLM ─────────────────────────────────────────────────
+  {
+    slug: 'token-counter',
+    name: 'LLM Token Counter',
+    description: 'Estimate token counts for GPT-4o, Claude, Llama, and Gemini models side by side',
+    category: 'AI Tools',
+    tier: 'core',
+    workflow: 'AI & LLM',
+  },
+  {
+    slug: 'context-window-calculator',
+    name: 'Context Window Calculator',
+    description:
+      'Calculate how much of an LLM context window your prompts use with visual breakdown',
+    category: 'AI Tools',
+    tier: 'core',
+    workflow: 'AI & LLM',
+  },
+  {
+    slug: 'prompt-template-formatter',
+    name: 'Prompt Template Formatter',
+    description:
+      'Create reusable prompt templates with {{variables}} and fill them via a dynamic form',
+    category: 'AI Tools',
+    tier: 'core',
+    workflow: 'AI & LLM',
+  },
+  {
+    slug: 'agent-config-generator',
+    name: 'AI Agent Config Generator',
+    description:
+      'Generate CLAUDE.md, .cursorrules, copilot-instructions.md, and more from your stack',
+    category: 'AI Tools',
+    tier: 'core',
+    workflow: 'AI & LLM',
+  },
+  {
+    slug: 'json-to-toon-converter',
+    name: 'JSON to TOON Converter',
+    description: 'Convert JSON to TOON (Token-Oriented Object Notation) and see token savings',
+    category: 'AI Tools',
+    tier: 'supporting',
+    workflow: 'AI & LLM',
+  },
+  {
+    slug: 'ai-tool-schema-builder',
+    name: 'AI Tool Schema Builder',
+    description: 'Build function calling schemas for OpenAI and Anthropic Claude visually',
+    category: 'AI Tools',
+    tier: 'core',
+    workflow: 'AI & LLM',
+  },
+  {
+    slug: 'toon-formatter',
+    name: 'TOON Formatter & Validator',
+    description: 'Validate TOON data and convert it back to JSON with syntax checking',
+    category: 'AI Tools',
+    tier: 'supporting',
+    workflow: 'AI & LLM',
   },
 ];
 
